@@ -9,8 +9,8 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
-const FALLBACK_ORIGIN = "http://localhost:3000";
-const SAFE_HOST = /^(?:localhost|127(?:\.\d{1,3}){3}|\[[0-9a-f:.]+\]|(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)(?::\d{1,5})?$/i;
+const PRODUCTION_ORIGIN = "https://lai-wei-evidence.futureavicii.chatgpt.site";
+const LOCAL_HOST = /^(?:localhost|127(?:\.\d{1,3}){3}|\[::1\])(?::\d{1,5})?$/i;
 const languageBootstrap =
   'try{document.documentElement.lang=new URLSearchParams(location.search).get("lang")==="en"?"en":"zh-CN"}catch{}';
 
@@ -24,18 +24,17 @@ function resolveRequestOrigin(incomingHeaders: { get(name: string): string | nul
     firstHeaderValue(incomingHeaders.get("host")) ??
     firstHeaderValue(incomingHeaders.get("x-forwarded-host"));
 
-  if (!host || !SAFE_HOST.test(host)) {
-    return FALLBACK_ORIGIN;
+  if (!host || !LOCAL_HOST.test(host)) {
+    return PRODUCTION_ORIGIN;
   }
 
   const forwardedProtocol = firstHeaderValue(incomingHeaders.get("x-forwarded-proto"));
-  const isLocal = /^(?:localhost|127(?:\.\d{1,3}){3}|\[::1\])(?::\d{1,5})?$/i.test(host);
-  const protocol = isLocal && forwardedProtocol === "http" ? "http" : "https";
+  const protocol = forwardedProtocol === "https" ? "https" : "http";
 
   try {
     return new URL(`${protocol}://${host}`).origin;
   } catch {
-    return FALLBACK_ORIGIN;
+    return PRODUCTION_ORIGIN;
   }
 }
 
@@ -119,3 +118,4 @@ export default function RootLayout({
     </html>
   );
 }
+
