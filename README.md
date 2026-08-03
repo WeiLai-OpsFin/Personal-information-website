@@ -4,6 +4,11 @@ A bilingual personal website for Lai Wei, designed for research, graduate-school
 
 The site presents one clear narrative: turning complex questions into testable models and decision-ready evidence across applied economics, policy evaluation, financial risk, and computational modeling.
 
+## Live site
+
+- [中文 / Chinese](https://lai-wei-evidence.futureavicii.chatgpt.site/)
+- [English](https://lai-wei-evidence.futureavicii.chatgpt.site/?lang=en)
+
 ## What is included
 
 - Chinese / English switching from the top-right language control, with a shareable English view at `?lang=en`
@@ -64,3 +69,4 @@ The phone number and exact date of birth are shown because the site owner explic
 ## Repository
 
 [WeiLai-OpsFin/Personal-information-website](https://github.com/WeiLai-OpsFin/Personal-information-website)
+
