@@ -3,6 +3,7 @@ import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const projectRoot = new URL("../", import.meta.url);
+const productionOrigin = "https://lai-wei-evidence.futureavicii.chatgpt.site";
 
 async function render(url = "https://lai-wei.example/", requestHeaders = {}) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -40,7 +41,7 @@ test("server-renders the bilingual personal site and social metadata", async () 
   assert.match(html, /182 4712 9040/);
   assert.match(html, /中文/);
   assert.match(html, />EN</);
-  assert.match(html, /https:\/\/lai-wei\.example\/og\.png/);
+  assert.match(html, new RegExp(`${productionOrigin.replaceAll(".", "\\.")}\\/og\\.png`));
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
@@ -63,6 +64,7 @@ test("keeps private source documents out of the public site", async () => {
   assert.match(page, /COMAP ICM 2026/);
   assert.doesNotMatch(page, /MCM\s*\/\s*ICM|stress-tested|压力测试/);
   assert.match(layout, /\/og\.png/);
+  assert.match(layout, /const PRODUCTION_ORIGIN = "https:\/\/lai-wei-evidence\.futureavicii\.chatgpt\.site"/);
   assert.match(layout, /alternates:/);
   assert.match(layout, /"x-default"/);
   assert.match(layout, /languageBootstrap/);
@@ -151,10 +153,11 @@ test("supports a shareable English URL and rejects forwarded metadata injection"
 
   const englishHtml = await englishResponse.text();
   assert.match(englishHtml, /Turning data into evidence for policy, finance, and business decisions/);
-  assert.match(englishHtml, /hrefLang="en" href="https:\/\/lai-wei\.example\/\?lang=en"/);
+  assert.match(englishHtml, /hrefLang="en" href="https:\/\/lai-wei-evidence\.futureavicii\.chatgpt\.site\/\?lang=en"/);
   assert.match(englishHtml, /URLSearchParams\(location\.search\)/);
 
   const hostileHeaderHtml = await hostileHeaderResponse.text();
-  assert.match(hostileHeaderHtml, /https:\/\/personal\.example\/og\.png/);
-  assert.doesNotMatch(hostileHeaderHtml, /evil\.example|javascript:\/\//);
+  assert.match(hostileHeaderHtml, /https:\/\/lai-wei-evidence\.futureavicii\.chatgpt\.site\/og\.png/);
+  assert.doesNotMatch(hostileHeaderHtml, /evil\.example|personal\.example|javascript:\/\//);
 });
+
