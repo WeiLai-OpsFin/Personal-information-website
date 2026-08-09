@@ -109,6 +109,7 @@ test("keeps original records private and publishes only the reviewed WebP deriva
   const [
     page,
     layout,
+    htmlLanguageSync,
     detailPage,
     portfolioContent,
     siteMetadata,
@@ -123,6 +124,7 @@ test("keeps original records private and publishes only the reviewed WebP deriva
   ] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/html-language-sync.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/detail-page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/portfolio-content.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/site-metadata.ts", import.meta.url), "utf8"),
@@ -143,6 +145,10 @@ test("keeps original records private and publishes only the reviewed WebP deriva
   assert.match(detailPage, /原始证明保留私有；只展示核验结果或脱敏副本。/);
   assert.match(detailPage, /Original records remain private; only verified facts or redacted copies are shown\./);
   assert.match(layout, /p==="\/en"\|\|p\.startsWith\("\/en\/"\)/);
+  assert.match(layout, /<HtmlLanguageSync\s*\/>/);
+  assert.match(htmlLanguageSync, /usePathname\(\)/);
+  assert.match(htmlLanguageSync, /useSearchParams\(\)/);
+  assert.match(htmlLanguageSync, /document\.documentElement\.lang\s*=\s*isEnglish\s*\?\s*"en"\s*:\s*"zh-CN"/);
   assert.match(layout, /\/images\/lai-wei-portrait-square\.webp/);
   assert.match(siteMetadata, /"x-default"/);
   assert.match(siteMetadata, /width:\s*1732/);

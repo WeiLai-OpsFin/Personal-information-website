@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import { HtmlLanguageSync } from "./html-language-sync";
 import { PRODUCTION_ORIGIN } from "./site-metadata";
 
 export const viewport: Viewport = {
@@ -114,7 +115,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: languageBootstrap }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <HtmlLanguageSync />
+        {children}
+      </body>
     </html>
   );
 }
