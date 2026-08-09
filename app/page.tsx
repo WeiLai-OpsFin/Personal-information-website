@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
 
 type Language = "zh" | "en";
+
+type HomeProps = {
+  initialLanguage?: Language;
+};
 
 const copy = {
   zh: {
@@ -15,6 +19,7 @@ const copy = {
       { id: "education", label: "学历成绩" },
       { id: "research", label: "科研" },
       { id: "competition", label: "竞赛" },
+      { id: "evidence", label: "成果" },
       { id: "experience", label: "经历" },
       { id: "life", label: "生活" },
       { id: "contact", label: "联系" },
@@ -38,14 +43,16 @@ const copy = {
       education: "02 / 学历与成绩",
       research: "03 / 科研",
       competition: "04 / 竞赛与项目",
-      experience: "05 / 实践经历",
-      life: "06 / 简历之外",
-      contact: "07 / 联系",
+      evidence: "05 / 成果与证据",
+      experience: "06 / 实践经历",
+      life: "07 / 简历之外",
+      contact: "08 / 联系",
     },
-    aboutTitle: "把模糊的问题，转化为可检验的研究设计与可信证据。",
+    aboutTitle: "关于我：选择真正重要的方向，然后把它做深、做扎实。",
     aboutBody:
-      "我是一名应用经济学一等荣誉毕业生。最初，我把经济学理解为模型与公式；在政策研究、消费者行为和金融实践中，我逐渐认识到，它更是一套理解现实、检验判断并改善决策的方法。我的经历横跨学术研究、银行、证券、投资与审计。",
+      "我是魏来，一名应用经济学一等荣誉毕业生。我相信稳定、持续、可重复的进步，长期关注金融如何服务实体经济，尤其是供应链金融、贸易融资、供应链韧性与风险管理。我重视逻辑、数据和证据，也愿意诚实说明结论的条件与边界。",
     aboutQuote: "好的分析不止给出一个数字，也要说明它从哪里来、意味着什么，以及下一步该做什么。",
+    aboutLink: "阅读完整自我介绍",
     capabilities: [
       {
         number: "01",
@@ -71,10 +78,11 @@ const copy = {
     metrics: [
       { value: "3.44", suffix: "/ 4.00", label: "最终 GPA" },
       { value: "一等", suffix: "荣誉", label: "学位等级" },
-      { value: "5×", suffix: "", label: "President’s Honour Roll" },
-      { value: "1×", suffix: "", label: "Dean’s List" },
+      { value: "多次", suffix: "", label: "President’s Honour Roll" },
+      { value: "入选", suffix: "", label: "Dean’s List" },
     ],
     coursesLabel: "精选课程",
+    academicsLink: "查看完整学历、课程与语言成绩",
     courses: [
       "时间序列数据分析 · A",
       "商业研究方法 · A",
@@ -92,6 +100,7 @@ const copy = {
     researchProjects: [
       {
         index: "R.01",
+        slug: "ltci-employment",
         title: "长期护理保险对就业的影响",
         period: "2025.09 — 2026.05",
         role: "共同作者",
@@ -101,15 +110,17 @@ const copy = {
       },
       {
         index: "R.02",
+        slug: "fake-review-booking",
         title: "网络虚假评论与酒店预订决策",
         period: "2026.02 — 2026.06",
         role: "第三作者",
-        status: "论文收录于 RARCS 2026 会议论文集",
-        text: "构建基于 Python 的 PLS-SEM 分析流程，覆盖问卷清理、操纵检验、测量与结构模型、Bootstrap 中介分析及 IPMA。研究表明，评论真实性主要通过消费者信任影响预订意向。",
+        status: "第三作者 · 小样本探索性研究",
+        text: "负责问卷清理、条件比较、DID 式分析与 PLS-SEM 式路径建模。68 份有效问卷的证据显示，真实性主要通过信任影响预订意向；DID 估计不显著，因此仅作探索性解释。",
         methods: ["Python", "PLS-SEM", "Bootstrap", "IPMA"],
       },
       {
         index: "R.03",
+        slug: "leader-humor-quiet-quitting",
         title: "领导者幽默与员工安静离职",
         period: "2025.09 — 2025.12",
         role: "第三作者",
@@ -119,6 +130,7 @@ const copy = {
       },
       {
         index: "R.04",
+        slug: "hospital-appointment-matching",
         title: "医院预约匹配机制",
         period: "2025.06 — 2025.07",
         role: "团队项目成员",
@@ -130,43 +142,108 @@ const copy = {
     competitionKicker: "COMAP ICM 2026 · Problem D",
     competitionTitle: "职业体育团队经营与估值模型",
     competitionAward: "Finalist",
-    competitionRole: "Python 建模成员",
+    competitionRole: "Finalist 团队成员 · 赛后公开 Python 重构",
     competitionText:
-      "整合赛程、票务、薪资、场馆与利率等多源数据，形成 5,065 条 WNBA 比赛级样本；构建连接 Elo 胜率、上座率、动态票价、EBITDA/DCF 估值与杠杆优化的量化框架，并通过 Monte Carlo 与敏感性分析识别关键风险驱动因素。",
+      "作为 2026 COMAP ICM Problem D Finalist 团队成员，赛后把项目重构为端到端 Python 流程，连接 Elo 胜率、上座率与动态票价、财务估值、策略比较、情景与 Monte Carlo 风险分析。公开重构与原始竞赛提交严格区分。",
     competitionStats: [
-      { value: "5,065", label: "比赛级样本" },
+      { value: "Python", label: "赛后公开重构" },
       { value: "Elo → DCF", label: "端到端框架" },
       { value: "2026", label: "Finalist" },
+    ],
+    competitionLink: "查看竞赛与公开重构详情",
+    featuredProjectsTitle: "更多可审查的公开项目",
+    featuredProjectsIntro: "每个详情页都明确区分个人角色、方法、结果与证据边界。",
+    featuredProjects: [
+      {
+        slug: "credit-risk-ridge-regression",
+        index: "P.01",
+        title: "商业银行信用风险与贷款行业暴露",
+        status: "独立公开实证项目",
+        text: "搭建银行—年份框架，以十类行业贷款暴露比较 OLS、岭回归、固定效应诊断与稳健性结果。",
+      },
+      {
+        slug: "financial-time-series-analysis",
+        index: "P.02",
+        title: "金融时间序列计量分析",
+        status: "独立 Stata 项目",
+        text: "从单位根、协整推进到误差修正和结构突变分析，区分共同趋势、长期均衡与短期调整。",
+      },
+      {
+        slug: "digital-scf-greenwashing",
+        index: "P.03",
+        title: "数字供应链金融与企业漂绿",
+        status: "关联性研究 · 因果识别仍在完善",
+        text: "整理大规模上市公司面板，探索数字供应链金融与绿色表达、绿色行动之间的固定效应关联。",
+      },
+    ],
+    viewDetail: "查看完整详情",
+    evidenceTitle: "只展示核验事实与脱敏副本。",
+    evidenceIntro:
+      "原始成绩单、证件、证明和邮件始终保持私有。这里展示的是经过事实核对的成果状态，以及去除团队号、第三方姓名、签名和联系信息后的低分辨率网页副本。",
+    evidenceItems: [
+      {
+        title: "COMAP ICM 2026 · Finalist",
+        meta: "官方证书已核验",
+        text: "展示副本仅保留本人姓名、学校、年份与奖项结果。",
+        image: "/evidence/icm-finalist-redacted.webp",
+        alt: "经过隐私处理的 COMAP ICM 2026 Finalist 成绩证明，只显示魏来、学校、年份与奖项",
+        href: "/projects/icm-2026-wnba",
+      },
+      {
+        title: "Path Academics · Market Design",
+        meta: "课程各项与总评均为 A",
+        text: "成绩页无学号、证书号、签名、二维码或第三方联系信息。",
+        image: "/evidence/path-academics-grade.webp",
+        alt: "Path Academics 市场设计课程成绩页，显示魏来各项与总评均为 A",
+        href: "/research/hospital-appointment-matching",
+      },
+      {
+        title: "EURAM 2026",
+        meta: "Accepted for oral presentation",
+        text: "现有证据只证明获得口头报告录用资格，不表述为已到场报告。",
+        href: "/research/leader-humor-quiet-quitting",
+      },
+      {
+        title: "RARCS 2026",
+        meta: "Accepted for presentation",
+        text: "录用状态已核验；因录用函与公开工作题名不同，详情页明确保留这一边界。",
+        href: "/research/fake-review-booking",
+      },
     ],
     experienceTitle: "把研究能力带到真实的金融与商业场景。",
     experienceIntro:
       "从审计、投资和公司金融到证券与风险管理，我在不同机构中练习同一件事：快速理解问题、核对证据，并把分析转化为可靠判断。",
     experiences: [
       {
+        slug: "ccb-risk-management",
         date: "2026.06 — 至今",
         company: "中国建设银行 · 内蒙古分行",
         role: "风险管理实习",
         tag: "银行风险",
       },
       {
+        slug: "citic-market-expansion",
         date: "2026.01 — 2026.02",
         company: "中信证券 · 内蒙古分公司",
         role: "市场拓展实习",
         tag: "证券",
       },
       {
+        slug: "icbc-corporate-banking",
         date: "2025.07 — 2025.08",
         company: "中国工商银行 · 内蒙古分行",
         role: "公司业务实习",
         tag: "公司金融",
       },
       {
+        slug: "icbc-investment",
         date: "2025.06 — 2025.07",
         company: "工银金融资产投资有限公司 · 南京",
         role: "投资实习",
         tag: "投资",
       },
       {
+        slug: "kpmg-audit",
         date: "2024.07 — 2024.08",
         company: "毕马威 · 广州",
         role: "审计实习",
@@ -221,6 +298,7 @@ const copy = {
       { id: "education", label: "Academics" },
       { id: "research", label: "Research" },
       { id: "competition", label: "Competition" },
+      { id: "evidence", label: "Evidence" },
       { id: "experience", label: "Experience" },
       { id: "life", label: "Beyond" },
       { id: "contact", label: "Contact" },
@@ -244,15 +322,17 @@ const copy = {
       education: "02 / EDUCATION & ACADEMICS",
       research: "03 / RESEARCH",
       competition: "04 / COMPETITION & PROJECTS",
-      experience: "05 / EXPERIENCE",
-      life: "06 / BEYOND THE CV",
-      contact: "07 / CONTACT",
+      evidence: "05 / OUTPUTS & EVIDENCE",
+      experience: "06 / EXPERIENCE",
+      life: "07 / BEYOND THE CV",
+      contact: "08 / CONTACT",
     },
-    aboutTitle: "Turning ambiguous questions into testable research designs and credible evidence.",
+    aboutTitle: "About me: choose a direction that matters, then build depth over time.",
     aboutBody:
-      "I am a First Class Honours graduate in Applied Economics. I once saw economics mainly as models and formulas; through policy research, consumer behavior, and financial practice, I came to see it as a way to understand reality, test judgment, and improve decisions. My experience spans academic research, banking, securities, investment, and audit.",
+      "I am Lai Wei, a First Class Honours graduate in Applied Economics. I believe in steady, repeatable progress and have a long-term interest in how finance serves the real economy—especially supply-chain finance, trade finance, resilience, and risk management. I value logic, data, and evidence, including honest explanations of where a conclusion stops.",
     aboutQuote:
       "Good analysis does more than produce a number. It explains where the number came from, what it means, and what to do next.",
+    aboutLink: "Read the full personal statement",
     capabilities: [
       {
         number: "01",
@@ -277,10 +357,11 @@ const copy = {
     metrics: [
       { value: "3.44", suffix: "/ 4.00", label: "Final GPA" },
       { value: "First", suffix: " Class", label: "Honours classification" },
-      { value: "5×", suffix: "", label: "President’s Honour Roll" },
-      { value: "1×", suffix: "", label: "Dean’s List" },
+      { value: "Multiple", suffix: "", label: "President’s Honour Roll" },
+      { value: "Listed", suffix: "", label: "Dean’s List" },
     ],
     coursesLabel: "Selected coursework",
+    academicsLink: "View full academics, coursework, and language results",
     courses: [
       "Time Series Data Analysis · A",
       "Business Research Methods · A",
@@ -298,6 +379,7 @@ const copy = {
     researchProjects: [
       {
         index: "R.01",
+        slug: "ltci-employment",
         title: "The Employment Effects of Long-Term Care Insurance",
         period: "Sep 2025 — May 2026",
         role: "Co-author",
@@ -307,15 +389,17 @@ const copy = {
       },
       {
         index: "R.02",
+        slug: "fake-review-booking",
         title: "Fake Online Reviews and Hotel Booking Decisions",
         period: "Feb 2026 — Jun 2026",
         role: "Third Author",
-        status: "Included in the RARCS 2026 conference proceedings",
-        text: "Built a Python-based PLS-SEM workflow covering survey preparation, manipulation checks, measurement and structural models, Bootstrap mediation, and IPMA. The findings suggest that review authenticity affects booking intention primarily through consumer trust.",
+        status: "Third author · exploratory small-sample study",
+        text: "Led questionnaire cleaning, condition comparisons, DID-style analysis, and PLS-SEM-style path modeling. Evidence from 68 valid responses suggests authenticity works mainly through trust; the DID estimate was not significant and is treated as exploratory.",
         methods: ["Python", "PLS-SEM", "Bootstrap", "IPMA"],
       },
       {
         index: "R.03",
+        slug: "leader-humor-quiet-quitting",
         title: "Leader Humor and Follower Quiet Quitting",
         period: "Sep 2025 — Dec 2025",
         role: "Third Author",
@@ -325,6 +409,7 @@ const copy = {
       },
       {
         index: "R.04",
+        slug: "hospital-appointment-matching",
         title: "Hospital Appointment Matching Mechanism",
         period: "Jun 2025 — Jul 2025",
         role: "Project contributor",
@@ -336,43 +421,108 @@ const copy = {
     competitionKicker: "COMAP ICM 2026 · PROBLEM D",
     competitionTitle: "Sports-Team Operations and Valuation",
     competitionAward: "Finalist",
-    competitionRole: "Python Modeler",
+    competitionRole: "Finalist team member · post-competition public Python reconstruction",
     competitionText:
-      "Integrated schedules, ticketing, salaries, venues, and interest rates into 5,065 WNBA game-level observations. Built an end-to-end quantitative framework linking Elo forecasts, attendance, dynamic pricing, EBITDA/DCF valuation, and leverage optimization, then used Monte Carlo simulation and sensitivity analysis to identify the key risk drivers.",
+      "Member of a 2026 COMAP ICM Problem D Finalist team. After the competition, rebuilt the work as an end-to-end Python pipeline spanning Elo forecasting, attendance and dynamic pricing, finance and valuation, strategy comparison, scenarios, and Monte Carlo risk analysis. The public reconstruction is explicitly separated from the original submission.",
     competitionStats: [
-      { value: "5,065", label: "Game-level observations" },
+      { value: "Python", label: "Public reconstruction" },
       { value: "Elo → DCF", label: "End-to-end framework" },
       { value: "2026", label: "Finalist" },
+    ],
+    competitionLink: "Explore the competition and public reconstruction",
+    featuredProjectsTitle: "More reviewable public projects",
+    featuredProjectsIntro: "Every detail page distinguishes role, method, result, and evidence boundary.",
+    featuredProjects: [
+      {
+        slug: "credit-risk-ridge-regression",
+        index: "P.01",
+        title: "Commercial-Bank Credit Risk and Industry Exposure",
+        status: "Independent empirical project",
+        text: "Built a bank-year framework with ten industry-exposure groups, comparing OLS and ridge specifications with fixed-effects and robustness diagnostics.",
+      },
+      {
+        slug: "financial-time-series-analysis",
+        index: "P.02",
+        title: "Financial Time-Series Econometrics",
+        status: "Independent Stata project",
+        text: "Moved from unit-root and cointegration tests to error-correction and structural-break analysis, separating shared trends, long-run equilibrium, and short-run adjustment.",
+      },
+      {
+        slug: "digital-scf-greenwashing",
+        index: "P.03",
+        title: "Digital Supply-Chain Finance and Greenwashing",
+        status: "Associational study · causal identification incomplete",
+        text: "Curated a large listed-firm panel to examine fixed-effects associations between digital supply-chain finance, green talk, and observable green action.",
+      },
+    ],
+    viewDetail: "View full details",
+    evidenceTitle: "Verified facts and privacy-reviewed copies only.",
+    evidenceIntro:
+      "Original transcripts, identity records, credentials, and emails remain private. The items below are verified outcome summaries or low-resolution web copies with team numbers, third-party names, signatures, and contact details removed.",
+    evidenceItems: [
+      {
+        title: "COMAP ICM 2026 · Finalist",
+        meta: "Official credential verified",
+        text: "The web copy retains only my name, institution, year, and award result.",
+        image: "/evidence/icm-finalist-redacted.webp",
+        alt: "Privacy-reviewed COMAP ICM 2026 Finalist credential showing only Lai Wei, institution, year, and award",
+        href: "/projects/icm-2026-wnba",
+      },
+      {
+        title: "Path Academics · Market Design",
+        meta: "All components and overall grade: A",
+        text: "The grade page contains no student number, credential number, signature, QR code, or third-party contact details.",
+        image: "/evidence/path-academics-grade.webp",
+        alt: "Path Academics market-design grade page showing A grades for Lai Wei",
+        href: "/research/hospital-appointment-matching",
+      },
+      {
+        title: "EURAM 2026",
+        meta: "Accepted for oral presentation",
+        text: "The evidence confirms acceptance; it does not establish attendance or a completed presentation.",
+        href: "/research/leader-humor-quiet-quitting",
+      },
+      {
+        title: "RARCS 2026",
+        meta: "Accepted for presentation",
+        text: "Acceptance is verified; the detail page preserves the title-version discrepancy in the available records.",
+        href: "/research/fake-review-booking",
+      },
     ],
     experienceTitle: "Taking research discipline into real financial and business settings.",
     experienceIntro:
       "Across audit, investment, corporate banking, securities, and risk management, I practice the same fundamentals: understand the problem quickly, verify the evidence, and translate analysis into reliable judgment.",
     experiences: [
       {
+        slug: "ccb-risk-management",
         date: "Jun 2026 — Present",
         company: "China Construction Bank · Inner Mongolia Branch",
         role: "Risk Management Intern",
         tag: "Banking risk",
       },
       {
+        slug: "citic-market-expansion",
         date: "Jan 2026 — Feb 2026",
         company: "CITIC Securities · Inner Mongolia Branch",
         role: "Market Expansion Intern",
         tag: "Securities",
       },
       {
+        slug: "icbc-corporate-banking",
         date: "Jul 2025 — Aug 2025",
         company: "ICBC · Inner Mongolia Branch",
         role: "Corporate Banking Intern",
         tag: "Corporate finance",
       },
       {
+        slug: "icbc-investment",
         date: "Jun 2025 — Jul 2025",
         company: "ICBC Investment · Nanjing",
         role: "Investment Intern",
         tag: "Investment",
       },
       {
+        slug: "kpmg-audit",
         date: "Jul 2024 — Aug 2024",
         company: "KPMG · Guangzhou",
         role: "Audit Intern",
@@ -421,24 +571,13 @@ const copy = {
   },
 } as const;
 
-export default function Home() {
+export default function Home({ initialLanguage }: HomeProps = {}) {
   const searchParams = useSearchParams();
-  const requestedLanguage: Language = searchParams.get("lang") === "en" ? "en" : "zh";
-  const [language, setLanguage] = useState<Language>(requestedLanguage);
+  const requestedLanguage: Language =
+    initialLanguage ?? (searchParams.get("lang") === "en" ? "en" : "zh");
+  const language = requestedLanguage;
   const t = copy[language];
-
-  const chooseLanguage = (nextLanguage: Language) => {
-    setLanguage(nextLanguage);
-    document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
-
-    const nextUrl = new URL(window.location.href);
-    if (nextLanguage === "en") {
-      nextUrl.searchParams.set("lang", "en");
-    } else {
-      nextUrl.searchParams.delete("lang");
-    }
-    window.history.replaceState(null, "", `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
-  };
+  const pathPrefix = language === "en" ? "/en" : "";
 
   return (
     <>
@@ -464,25 +603,23 @@ export default function Home() {
         </nav>
 
         <div className="language-switch" role="group" aria-label={t.languageLabel}>
-          <button
-            type="button"
+          <Link
             lang="zh-CN"
             className={language === "zh" ? "active" : ""}
-            aria-pressed={language === "zh"}
-            onClick={() => chooseLanguage("zh")}
+            aria-current={language === "zh" ? "page" : undefined}
+            href="/"
           >
             中文
-          </button>
+          </Link>
           <span aria-hidden="true">/</span>
-          <button
-            type="button"
+          <Link
             lang="en"
             className={language === "en" ? "active" : ""}
-            aria-pressed={language === "en"}
-            onClick={() => chooseLanguage("en")}
+            aria-current={language === "en" ? "page" : undefined}
+            href="/en"
           >
             EN
-          </button>
+          </Link>
         </div>
       </header>
 
@@ -519,16 +656,18 @@ export default function Home() {
 
           <div className="hero-visual">
             <div className="portrait-frame">
-              <Image
-                src="/images/lai-wei-portrait.jpg"
-                alt={t.heroPortraitAlt}
-                width={1239}
-                height={1682}
-                sizes="(max-width: 900px) 72vw, 30vw"
-                loading="eager"
-                fetchPriority="high"
-                unoptimized
-              />
+              <div className="portrait-media">
+                <Image
+                  src="/images/lai-wei-portrait-square.webp"
+                  alt={t.heroPortraitAlt}
+                  width={720}
+                  height={720}
+                  sizes="(max-width: 640px) 220px, (max-width: 1180px) 280px, 340px"
+                  loading="eager"
+                  fetchPriority="high"
+                  unoptimized
+                />
+              </div>
               <div className="portrait-caption">
                 <span>{t.heroPortraitCaption}</span>
                 <span>{t.heroStatus}</span>
@@ -563,6 +702,9 @@ export default function Home() {
               <div className="about-copy">
                 <p>{t.aboutBody}</p>
                 <blockquote>{t.aboutQuote}</blockquote>
+                <Link className="detail-link" href={`${pathPrefix}/about`}>
+                  {t.aboutLink} <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </div>
             <div className="capability-grid">
@@ -612,6 +754,9 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+            <Link className="detail-link section-detail-link" href={`${pathPrefix}/academics`}>
+              {t.academicsLink} <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </section>
 
@@ -649,6 +794,13 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
+                  <Link
+                    className="detail-link"
+                    href={`${pathPrefix}/research/${project.slug}`}
+                    aria-label={`${t.viewDetail}：${project.title}`}
+                  >
+                    {t.viewDetail} <span aria-hidden="true">→</span>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -666,6 +818,9 @@ export default function Home() {
                 <h2 id="competition-title">{t.competitionTitle}</h2>
                 <p className="competition-role">{t.competitionRole}</p>
                 <p>{t.competitionText}</p>
+                <Link className="detail-link detail-link-light" href={`${pathPrefix}/projects/icm-2026-wnba`}>
+                  {t.competitionLink} <span aria-hidden="true">→</span>
+                </Link>
               </div>
               <div className="award-mark" aria-label={`COMAP ICM 2026 ${t.competitionAward}`}>
                 <span>COMAP</span>
@@ -681,6 +836,73 @@ export default function Home() {
                 ))}
               </div>
             </article>
+
+            <div className="featured-projects-heading">
+              <h3>{t.featuredProjectsTitle}</h3>
+              <p>{t.featuredProjectsIntro}</p>
+            </div>
+            <div className="featured-project-grid">
+              {t.featuredProjects.map((project) => (
+                <article className="featured-project-card" key={project.slug}>
+                  <p className="mini-label">{project.index}</p>
+                  <h3>{project.title}</h3>
+                  <p className="featured-project-status">{project.status}</p>
+                  <p>{project.text}</p>
+                  <Link
+                    className="detail-link"
+                    href={`${pathPrefix}/projects/${project.slug}`}
+                    aria-label={`${t.viewDetail}：${project.title}`}
+                  >
+                    {t.viewDetail} <span aria-hidden="true">→</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+          <div className="section-rail">
+            <p className="section-index">{t.sectionLabels.evidence}</p>
+          </div>
+          <div className="section-content">
+            <div className="section-heading split-heading">
+              <h2 id="evidence-title">{t.evidenceTitle}</h2>
+              <p>{t.evidenceIntro}</p>
+            </div>
+            <div className="evidence-overview-grid">
+              {t.evidenceItems.map((item) => (
+                <article className="evidence-overview-card" key={item.title}>
+                  {"image" in item && item.image ? (
+                    <div className="evidence-overview-image">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        width={1400}
+                        height={900}
+                        sizes="(max-width: 720px) 100vw, 45vw"
+                        loading="lazy"
+                        unoptimized
+                      />
+                    </div>
+                  ) : (
+                    <div className="evidence-overview-mark" aria-hidden="true">✓</div>
+                  )}
+                  <div className="evidence-overview-copy">
+                    <p className="privacy-badge"><span aria-hidden="true">✓</span> {item.meta}</p>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                    <Link
+                      className="detail-link"
+                      href={`${pathPrefix}${item.href}`}
+                      aria-label={`${t.viewDetail}：${item.title}`}
+                    >
+                      {t.viewDetail} <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -703,6 +925,13 @@ export default function Home() {
                     <p>{experience.role}</p>
                   </div>
                   <span className="timeline-tag">{experience.tag}</span>
+                  <Link
+                    className="timeline-detail-link"
+                    href={`${pathPrefix}/experience/${experience.slug}`}
+                    aria-label={`${t.viewDetail}：${experience.company} ${experience.role}`}
+                  >
+                    {t.viewDetail} <span aria-hidden="true">→</span>
+                  </Link>
                 </li>
               ))}
             </ol>

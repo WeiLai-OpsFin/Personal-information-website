@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
+import { PRODUCTION_ORIGIN } from "./site-metadata";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -9,10 +10,9 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
-const PRODUCTION_ORIGIN = "https://lai-wei-evidence.futureavicii.chatgpt.site";
 const LOCAL_HOST = /^(?:localhost|127(?:\.\d{1,3}){3}|\[::1\])(?::\d{1,5})?$/i;
 const languageBootstrap =
-  'try{document.documentElement.lang=new URLSearchParams(location.search).get("lang")==="en"?"en":"zh-CN"}catch{}';
+  'try{const p=location.pathname,q=new URLSearchParams(location.search).get("lang");document.documentElement.lang=q==="en"||p==="/en"||p.startsWith("/en/")?"en":"zh-CN"}catch{}';
 
 function firstHeaderValue(value: string | null): string | null {
   const firstValue = value?.split(",", 1)[0]?.trim();
@@ -61,8 +61,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "BNBU",
     ],
     icons: {
-      icon: "/images/lai-wei-portrait.jpg",
-      apple: "/images/lai-wei-portrait.jpg",
+      icon: "/images/lai-wei-portrait-square.webp",
+      apple: "/images/lai-wei-portrait-square.webp",
     },
     robots: {
       index: true,
@@ -72,7 +72,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: new URL("/", siteUrl).toString(),
       languages: {
         "zh-CN": new URL("/", siteUrl).toString(),
-        en: new URL("/?lang=en", siteUrl).toString(),
+        en: new URL("/en", siteUrl).toString(),
         "x-default": new URL("/", siteUrl).toString(),
       },
     },
