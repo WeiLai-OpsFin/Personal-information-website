@@ -43,14 +43,14 @@ const github = "https://github.com/WeiLai-OpsFin";
 export const aboutDetail: BilingualDetail = {
   zh: {
     eyebrow: "自我介绍 · PERSONAL STATEMENT",
-    title: "一个重视长期积累、独立思考和真实价值的人",
+    title: "从应用经济学出发，研究政策、金融与真实企业问题",
     summary:
-      "我是魏来，一名应用经济学一等荣誉毕业生。相比追逐短期热度，我更愿意选择一个真正重要的方向，持续学习、反复练习，并把它做深、做扎实。",
+      "我是魏来，一名应用经济学一等荣誉毕业生。我的研究与项目覆盖政策评估、信用风险、供应链金融和市场设计，常用 DID、面板回归、Python 与 Stata 将问题转化为可检验、可复现的分析流程。",
     highlights: [
-      { value: "长期主义", label: "用稳定、可重复的进步替代短期冲动" },
-      { value: "实体经济", label: "关注金融工具如何解决真实企业问题" },
-      { value: "证据意识", label: "追问结论的条件、限制与现实含义" },
-      { value: "持续成长", label: "诚实面对不足，并把方向拆成行动" },
+      { value: "一等荣誉", label: "应用经济学 · GPA 3.44/4.00" },
+      { value: "面板研究", label: "城市、企业与银行层面数据" },
+      { value: "实证工具", label: "DID、事件研究、回归、Python、Stata" },
+      { value: "金融实践", label: "审计、投资、公司金融、证券与风险管理" },
     ],
     sections: [
       {
@@ -61,24 +61,24 @@ export const aboutDetail: BilingualDetail = {
         ],
       },
       {
-        heading: "如何推进目标：先明确方向，再拆解执行",
+        heading: "从问题到结果：把研究做成完整流程",
         paragraphs: [
-          "我是一个目标感较强、重视长期规划的人。我习惯先明确方向，再把大目标拆成可以执行的小任务。我重视学习成绩、科研训练、实习经历和专业能力的积累，也愿意为有价值的目标投入较长时间。",
-          "我不太相信“突然成功”，更相信稳定、持续和可重复的进步。",
+          "我通常从一个可回答的问题开始：先定义机制和变量，再完成数据清理、模型设定、稳健性检验与结果呈现。毕业研究、信用风险项目和竞赛后的模型重构都沿用了这套工作流程。",
+          "这种工作方式让我能够把长期项目拆成可执行阶段，并持续交付代码、结果表、图表和汇报材料。",
         ],
       },
       {
-        heading: "如何研究：追问结论为什么成立",
+        heading: "研究方式：识别、检验与解释",
         paragraphs: [
-          "在学习和研究中，我喜欢独立思考，也喜欢把问题追问到底。我不满足于只记住一个结论，而是希望弄清楚它为什么成立、适用于什么情况、存在哪些限制，以及它能否解决现实问题。",
-          "我对逻辑、数据和证据比较敏感，做决定时通常较为谨慎。我愿意承认自己不知道，也愿意花时间补足基础，而不是用模糊的话掩盖问题。",
+          "我关注的不只是结论本身，更关注假设、识别、数据质量和适用条件。面对不确定性，我会先定位缺少的证据，再补齐数据与方法。",
+          "在公开项目中，我把基准结果、稳健性检验和适用范围分别呈现，并通过脚本、结果表和方法说明保留完整分析链条。",
         ],
       },
       {
-        heading: "如何与人相处：安静，但认真回应",
+        heading: "协作方式：倾听、梳理、推进",
         paragraphs: [
-          "我的性格偏安静、内向。我不热衷于频繁而喧闹的社交，更喜欢一对一、真诚、有内容的交流。刚进入陌生环境时，我可能不会成为最活跃的人；在建立信任之后，我愿意认真倾听、坦诚表达，并与他人深入讨论。",
-          "我的优势不是制造热闹，而是专注、可靠和认真回应。",
+          "我偏好有内容的沟通，习惯先听清问题，再把讨论整理成明确的下一步行动。在团队研究和实习中，我承担过双语协调、数据处理、成果排版与正式汇报。",
+          "面对新的合作环境，我会通过充分准备、及时反馈和稳定交付建立协作节奏。",
         ],
       },
       {
@@ -95,30 +95,29 @@ export const aboutDetail: BilingualDetail = {
         ],
       },
       {
-        heading: "健康、风险与人工智能时代",
+        heading: "风险意识与新工具",
         paragraphs: [
-          "我重视健康、节制和清晰的生活方式，也对风险保持敬畏。我不会因为短期利益轻易冒险，更认同通过专业知识、稳定工作、持续学习和长期积累创造价值。",
-          "这种谨慎并不意味着拒绝变化。面对人工智能和产业快速变化，我希望主动学习新工具，同时培养更难被替代的能力：提出好问题、理解真实业务、分析复杂系统、进行可靠判断，并与不同背景的人合作。",
+          "面对不确定性，我习惯先识别风险、拆分假设，再通过情景分析和小步验证推进。人工智能和产业变化正在扩展研究与业务分析的工具边界，我希望主动使用新工具，同时继续加强业务理解、复杂系统分析和跨团队协作能力。",
         ],
       },
       {
-        heading: "仍在成长",
+        heading: "下一步方向",
         paragraphs: [
-          "我并不认为自己已经成熟或完善。我仍在提升表达能力、研究能力、实践经验和团队协作能力，也在学习如何更主动地进入新的环境、建立更广泛的专业联系。",
-          "但我的方向比较清楚：成为一个诚实、可靠、专业、能够长期坚持的人；在金融、供应链和实体产业的交叉领域持续深耕；用严谨的研究和实际行动，解决有现实意义的问题。",
+          "下一阶段，我计划继续深化供应链金融、贸易融资、供应链韧性与风险管理，把面板研究和计算建模进一步连接到企业融资、现金流与产业链风险场景。",
+          "同时，我会继续加强研究表达、业务理解和跨团队协作，把学术训练转化为可落地的分析与决策支持。",
         ],
       },
     ],
     methods: [
-      "长期主义",
-      "专注",
-      "自律",
-      "谨慎",
-      "真诚",
-      "独立思考",
-      "重视证据",
-      "尊重风险",
-      "关注实体经济",
+      "政策评估",
+      "面板数据",
+      "金融风险",
+      "供应链金融",
+      "Python",
+      "Stata",
+      "研究表达",
+      "商业分析",
+      "情景分析",
     ],
     links: [
       { label: "查看 GitHub 项目", href: github, note: "公开代码与研究记录" },
@@ -126,42 +125,42 @@ export const aboutDetail: BilingualDetail = {
   },
   en: {
     eyebrow: "PERSONAL STATEMENT · 关于我",
-    title: "Someone who values compounding, independent thought, and real-world value",
+    title: "From applied economics to policy, finance, and real-sector problems",
     summary:
-      "I am Lai Wei, a First Class Honours graduate in Applied Economics. Rather than chase short-lived trends, I prefer to choose a meaningful direction, keep learning and practising, and build depth over time.",
+      "I am Lai Wei, a First Class Honours graduate in Applied Economics. My work spans policy evaluation, credit risk, supply-chain finance, and market design, using DID, panel regression, Python, and Stata to build testable and reproducible analytical workflows.",
     highlights: [
-      { value: "Long-termism", label: "Stable, repeatable progress over short-term impulse" },
-      { value: "Real economy", label: "Finance should solve problems faced by real firms" },
-      { value: "Evidence", label: "Ask when a conclusion holds and where it stops" },
-      { value: "Growth", label: "Acknowledge gaps and translate direction into action" },
+      { value: "First Class", label: "Applied Economics · GPA 3.44/4.00" },
+      { value: "Panel research", label: "City-, firm-, and bank-level data" },
+      { value: "Empirical tools", label: "DID, event studies, regression, Python, Stata" },
+      { value: "Finance practice", label: "Audit, investment, corporate banking, securities, and risk" },
     ],
     sections: [
       {
         heading: "A long-term direction: finance in service of the real economy",
         paragraphs: [
-          "My long-term interest is in how finance can serve the real economy more effectively. I am especially drawn to supply-chain finance, trade finance, supply-chain resilience, and risk management: how financial tools can enter real industrial chains, ease financing constraints for smaller firms, improve manufacturers’ cash flow, and make supply chains more resilient to shocks.",
+          "My long-term interest is in how finance can serve the real economy more effectively. I am especially drawn to supply-chain finance, trade finance, supply-chain resilience, and risk management: how financial tools can be embedded in industrial supply chains, ease financing constraints for smaller firms, improve manufacturers’ cash flow, and make supply chains more resilient to shocks.",
           "To me, finance is not only about numbers, models, or transactions. It should help solve problems that real businesses face in day-to-day operations.",
         ],
       },
       {
-        heading: "How I pursue goals: direction first, then executable steps",
+        heading: "From question to output: building complete analytical workflows",
         paragraphs: [
-          "I am strongly goal-oriented and take long-term planning seriously. I start by clarifying a direction, then break a large objective into concrete tasks. I care about the cumulative value of academic work, research training, internships, and professional skills, and I am willing to invest sustained effort in something worthwhile.",
-          "I do not place much faith in sudden success. I believe more in progress that is steady, repeatable, and earned over time.",
+          "I start with an answerable question: define the mechanism and variables, then move through data preparation, specification, robustness checks, and communication. My final-year study, credit-risk project, and post-competition model reconstruction all follow this workflow.",
+          "This approach lets me break long projects into executable stages and deliver code, result tables, figures, and presentation materials throughout the process.",
         ],
       },
       {
-        heading: "How I study and research: keep asking why",
+        heading: "Research approach: identification, testing, and interpretation",
         paragraphs: [
-          "I enjoy thinking independently and following a question until its logic is clear. Remembering a result is not enough: I want to know why it holds, when it applies, what its limitations are, and whether it can address a real problem.",
-          "I am sensitive to logic, data, and evidence, and usually cautious when making judgments. I am comfortable admitting what I do not know and taking the time to strengthen the foundations instead of hiding uncertainty behind vague language.",
+          "I pay attention not only to conclusions, but also to assumptions, identification, data quality, and the conditions under which a result applies. When an answer is uncertain, I identify the missing evidence and strengthen the data or design.",
+          "In public projects, I separate baseline results, robustness checks, and interpretation, while preserving the full analytical chain through scripts, tables, and method notes.",
         ],
       },
       {
-        heading: "How I relate to people: quiet, but fully present",
+        heading: "How I collaborate: listen, structure, and move the work forward",
         paragraphs: [
-          "I am naturally quiet and introverted. I prefer sincere, substantive one-to-one conversations to frequent, noisy socialising. I may not be the most visible person in a new environment, but once trust is established I listen carefully, communicate honestly, and engage deeply.",
-          "My strength is not creating noise; it is being focused, dependable, and thoughtful in how I respond.",
+          "I prefer substantive communication: understand the problem first, then turn discussion into clear next steps. Across team research and internships, I have handled bilingual coordination, data work, document design, and formal presentations.",
+          "In a new collaboration, I establish momentum through preparation, timely feedback, and dependable delivery.",
         ],
       },
       {
@@ -178,30 +177,29 @@ export const aboutDetail: BilingualDetail = {
         ],
       },
       {
-        heading: "Health, risk, and an AI-shaped future",
+        heading: "Risk discipline and new tools",
         paragraphs: [
-          "I value health, moderation, and a clear way of living, and I treat risk with respect. I do not take large risks for short-term gain; I would rather create value through professional knowledge, steady work, continued learning, and long-term accumulation.",
-          "Caution does not mean resisting change. As AI and industry evolve quickly, I want to learn new tools while building capabilities that remain difficult to replace: asking good questions, understanding real operations, analysing complex systems, making reliable judgments, and working across different backgrounds.",
+          "I approach uncertainty by identifying risks, separating assumptions, and testing in small steps or structured scenarios. AI and industry change are expanding the analytical toolkit; I intend to use those tools while deepening business understanding, complex-systems analysis, and cross-functional collaboration.",
         ],
       },
       {
-        heading: "Still growing",
+        heading: "What I am building next",
         paragraphs: [
-          "I do not consider myself complete or fully mature. I am still strengthening my communication, research, practical experience, and teamwork, and learning to enter new environments more proactively and build wider professional relationships.",
-          "But my direction is clear: to become honest, dependable, professional, and capable of sustained effort; to work at the intersection of finance, supply chains, and real industry; and to use rigorous research and practical action to solve meaningful problems.",
+          "My next step is to deepen work in supply-chain finance, trade finance, resilience, and risk management, connecting panel research and computational modelling more directly to corporate financing, cash flow, and supply-chain risk.",
+          "I will continue strengthening research communication, business understanding, and cross-team execution so that academic training becomes practical analysis and decision support.",
         ],
       },
     ],
     methods: [
-      "Long-termism",
-      "Focus",
-      "Discipline",
-      "Caution",
-      "Sincerity",
-      "Independent thought",
-      "Evidence",
-      "Respect for risk",
-      "Real-economy focus",
+      "Policy evaluation",
+      "Panel data",
+      "Financial risk",
+      "Supply-chain finance",
+      "Python",
+      "Stata",
+      "Research communication",
+      "Business analysis",
+      "Scenario analysis",
     ],
     links: [
       { label: "Explore GitHub projects", href: github, note: "Public code and research records" },
@@ -227,7 +225,7 @@ export const academicsDetail: BilingualDetail = {
       {
         heading: "学位与培养",
         paragraphs: [
-          "完成 Bachelor of Business Administration (Honours) in Applied Economics。官方毕业材料确认已满足毕业要求，课程采用英文教学。",
+          "于 2026 年 6 月完成 Bachelor of Business Administration (Honours) in Applied Economics，全英文培养方案共修读 161 学分。",
           "训练将经济学直觉、金融知识、计量方法和数据工具结合起来，为后续政策评估、信用风险与供应链金融研究提供基础。",
         ],
       },
@@ -248,7 +246,7 @@ export const academicsDetail: BilingualDetail = {
         heading: "学术荣誉与语言",
         bullets: [
           "多次入选 President’s Honour Roll，并入选 Dean’s List。",
-          "2024—2025 学年二等荣誉奖学金（简历记录；未在网站公开原始证明）。",
+          "2024—2025 学年二等荣誉奖学金。",
           "IELTS Overall 7.0：Reading 8.5、Listening 7.0、Writing 6.0、Speaking 6.0。",
         ],
       },
@@ -256,15 +254,13 @@ export const academicsDetail: BilingualDetail = {
     methods: ["Panel data", "Time series", "Python", "Stata", "R", "Finance", "Business analytics"],
     evidence: [
       {
-        title: "官方成绩与毕业材料已核验",
-        description:
-          "网站只展示经过核对的 GPA、学位等级与课程成绩。原成绩单、身份证号、学号、证书号和二维码保持私有。",
+        title: "学位与成绩",
+        description: "官方材料记录最终 GPA 3.44/4.00、一等荣誉学位、161 学分及所列课程成绩。",
         privacyReviewed: true,
       },
       {
         title: "IELTS 7.0",
-        description:
-          "分项成绩来自 IELTS Test Report Form；原始 TRF 含候选人编号等身份字段，因此仅发布文字成绩。",
+        description: "Overall 7.0：Reading 8.5、Listening 7.0、Writing 6.0、Speaking 6.0。",
         privacyReviewed: true,
       },
     ],
@@ -278,7 +274,7 @@ export const academicsDetail: BilingualDetail = {
     status: "First Class Honours",
     highlights: [
       { value: "3.44", label: "Final GPA / 4.00" },
-      { value: "161", label: "Units completed" },
+      { value: "161", label: "Units earned" },
       { value: "First", label: "Honours classification" },
       { value: "7.0", label: "IELTS Overall" },
     ],
@@ -286,7 +282,7 @@ export const academicsDetail: BilingualDetail = {
       {
         heading: "Degree and training",
         paragraphs: [
-          "Completed the Bachelor of Business Administration (Honours) in Applied Economics. Official graduation records confirm that all requirements were met, and the programme used English as its medium of instruction.",
+          "Graduated in June 2026 with a Bachelor of Business Administration (Honours) in Applied Economics after completing 161 units in an English-medium programme.",
           "The curriculum connected economic reasoning, finance, econometrics, and data tools, forming the foundation for later work on policy evaluation, credit risk, and supply-chain finance.",
         ],
       },
@@ -307,7 +303,7 @@ export const academicsDetail: BilingualDetail = {
         heading: "Academic honours and English",
         bullets: [
           "Named to the President’s Honour Roll multiple times and to the Dean’s List.",
-          "Second-class scholarship for 2024–2025 (recorded in the CV; the original proof is not published on the site).",
+          "Second-class scholarship, 2024–2025.",
           "IELTS Overall 7.0: Reading 8.5, Listening 7.0, Writing 6.0, Speaking 6.0.",
         ],
       },
@@ -315,15 +311,13 @@ export const academicsDetail: BilingualDetail = {
     methods: ["Panel data", "Time series", "Python", "Stata", "R", "Finance", "Business analytics"],
     evidence: [
       {
-        title: "Academic records verified",
-        description:
-          "Only verified GPA, degree classification, and selected course results are shown. The original transcript, national ID, student number, certificate number, and QR code remain private.",
+        title: "Degree and academic record",
+        description: "Official records list a final GPA of 3.44/4.00, 161 units, First Class Honours, and the selected course results above.",
         privacyReviewed: true,
       },
       {
         title: "IELTS 7.0",
-        description:
-          "Scores were checked against the IELTS Test Report Form. Because the original contains candidate identifiers, the site publishes text scores only.",
+        description: "Overall 7.0: Reading 8.5, Listening 7.0, Writing 6.0, and Speaking 6.0.",
         privacyReviewed: true,
       },
     ],
@@ -363,8 +357,7 @@ export const researchDetails: Record<string, BilingualDetail> = {
         {
           heading: "结果与解释",
           paragraphs: [
-            "现有证据更一致地支持正式照护相关就业和服务能力先扩张；医生供给的调整相对缓慢，部分结果对模型设定更敏感。",
-            "因此网站不把所有医疗供给指标概括为同一个确定效应，也不把协同完成的项目包装成个人独立研究。",
+            "综合基准 DID、事件研究与稳健性结果，正式照护相关就业和服务能力的扩张更为稳定；医生供给与医疗机构数量的估计对模型设定更敏感。核心结论因此聚焦照护相关就业与服务能力。",
           ],
         },
       ],
@@ -375,17 +368,15 @@ export const researchDetails: Record<string, BilingualDetail> = {
       ],
       evidence: [
         {
-          title: "公开研究包",
+          title: "报告、代码与清洗面板",
           description: "仓库包含最终报告、答辩材料、Stata 脚本、清洗面板、结果表与精选图。",
           privacyReviewed: true,
         },
       ],
-      limitation:
-        "GitHub 能确认共同作者身份，但没有公开拆分两位作者的具体工作，因此本页仅使用“共同作者”这一可核实角色。",
     },
     en: {
       eyebrow: "FINAL-YEAR RESEARCH · POLICY EVALUATION",
-      title: "Long-Term Care Insurance and care-related employment",
+      title: "Long-Term Care Insurance and Care-Related Employment",
       summary:
         "Co-authored a final-year study with Hanyang Qin, treating China’s 2016 Long-Term Care Insurance pilot as a policy shock and using a city panel, two-way fixed-effects DID, and event studies to assess adjustment in formal care services and related employment.",
       period: "Sep 2025 — May 2026",
@@ -414,8 +405,7 @@ export const researchDetails: Record<string, BilingualDetail> = {
         {
           heading: "Finding and interpretation",
           paragraphs: [
-            "The evidence is more consistent with earlier expansion in formal care-related employment and service capacity, while physician supply adjusts more slowly and some estimates remain specification-sensitive.",
-            "The page therefore avoids collapsing all medical supply outcomes into one certain effect or presenting a co-authored project as individual work.",
+            "Across the baseline DID, event study, and robustness checks, formal care-related employment and service capacity show the more stable expansion. Estimates for physician supply and institution counts are more specification-sensitive, so the main conclusion centres on care employment and service capacity.",
           ],
         },
       ],
@@ -426,13 +416,11 @@ export const researchDetails: Record<string, BilingualDetail> = {
       ],
       evidence: [
         {
-          title: "Public research package",
+          title: "Report, code, and cleaned panel",
           description: "The repository contains the final report, defence deck, Stata scripts, cleaned panel, result tables, and selected figures.",
           privacyReviewed: true,
         },
       ],
-      limitation:
-        "GitHub verifies co-authorship but does not divide the two authors’ individual tasks, so this page uses only the verifiable role of co-author.",
     },
   },
   "fake-review-booking": {
@@ -443,11 +431,11 @@ export const researchDetails: Record<string, BilingualDetail> = {
         "作为第三作者，主要参与问卷数据清理、条件比较、DID 式分析与 PLS-SEM 式结构路径建模，研究评论真实性如何通过信任影响预订意向。",
       period: "2026.02 — 2026.06",
       role: "第三作者 · 数据分析",
-      status: "RARCS 2026 相关会议论文；获报告录用资格",
+      status: "RARCS 2026 报告录用",
       highlights: [
         { value: "68", label: "有效问卷" },
         { value: ".667", label: "预订意向 R²" },
-        { value: ".166", label: "真实性→信任间接效应" },
+        { value: ".166", label: "经真实性与信任的序列间接效应" },
       ],
       sections: [
         {
@@ -459,18 +447,18 @@ export const researchDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "关键证据",
+          heading: "关键结果",
           bullets: [
             "真实评论组的感知真实性高 0.746（p < .001，Cohen’s d = 1.08）。",
             "真实评论组的信任得分高 0.497（p = .0021）。",
             "评论类型经由真实性与信任影响预订意向的间接效应为 0.166（p = .0037）。",
-            "预订意向 DID 式估计为 −0.130（p = .412），不显著，仅作探索性证据。",
+            "预订意向 DID 式估计为 −0.130（p = .412），未识别出显著直接变化；该结果与路径模型分别报告。",
           ],
         },
         {
-          heading: "成果状态",
+          heading: "会议成果",
           paragraphs: [
-            "本地接收函能够确认 RARCS 2026 报告录用资格；网站不声称本人已经到场报告。接收函的工作题名与公开论文题名并不完全一致，因此本页只陈述经仓库和接收材料共同支持的研究主题与状态。",
+            "研究获 RARCS 2026 报告录用，主题聚焦评论真实性、消费者信任与酒店预订意向之间的作用机制。公开仓库提供数据处理流程和主要实证结果。",
           ],
         },
       ],
@@ -481,66 +469,66 @@ export const researchDetails: Record<string, BilingualDetail> = {
       ],
       evidence: [
         {
-          title: "RARCS 2026 接收状态已核验",
-          description: "接收函只作为内部核验依据；原邮件、地址、联系人和签名未上传网站。",
+          title: "RARCS 2026 报告录用",
+          description: "会议接收材料确认该研究获得报告录用。",
           privacyReviewed: true,
         },
       ],
       limitation:
-        "样本较小，DID 式预订意向估计不显著；页面明确区分探索性比较与结构路径证据，也不把 NLP 部分误写为个人已确认贡献。",
+        "研究基于 68 份有效问卷，主要用于探索真实性、信任与预订意向的路径机制；DID 式比较与路径分析采用不同解释口径。",
     },
     en: {
       eyebrow: "CONSUMER BEHAVIOUR · BUSINESS ANALYTICS",
       title: "Fake reviews, consumer trust, and hotel booking",
       summary:
-        "As third author, contributed primarily to questionnaire-data cleaning, condition comparisons, DID-style analysis, and PLS-SEM-style structural-path modeling to study how review authenticity shapes booking intention through trust.",
+        "As third author, contributed primarily to questionnaire data cleaning, condition comparisons, DID-style analysis, and PLS-SEM-informed structural-path modelling to study how review authenticity shapes booking intention through trust.",
       period: "Feb 2026 — Jun 2026",
       role: "Third author · Data analysis",
-      status: "RARCS 2026-associated conference paper; accepted for presentation",
+      status: "Accepted for presentation at RARCS 2026",
       highlights: [
         { value: "68", label: "Valid responses" },
         { value: ".667", label: "Booking-intention R²" },
-        { value: ".166", label: "Authenticity→trust indirect effect" },
+        { value: ".166", label: "Serial indirect effect via authenticity & trust" },
       ],
       sections: [
         {
           heading: "My contribution",
           bullets: [
             "Merged the real- and fake-review questionnaire conditions and handled naming, coding, reverse-scored items, and valid-sample screening.",
-            "Ran condition comparisons, DID-style estimates, and PLS-SEM-style measurement and structural-path analyses.",
+            "Ran condition comparisons, DID-style estimates, and PLS-SEM-informed measurement and structural-path analyses.",
             "Prepared reliability, validity, mediation, IPMA, and result-interpretation materials.",
           ],
         },
         {
-          heading: "Key evidence",
+          heading: "Key results",
           bullets: [
             "Perceived authenticity was 0.746 higher in the real-review condition (p < .001; Cohen’s d = 1.08).",
             "Trust was 0.497 higher in the real-review condition (p = .0021).",
             "The indirect path from review type through authenticity and trust to booking intention was 0.166 (p = .0037).",
-            "The DID-style booking-intention estimate was −0.130 (p = .412), not significant, and is reported only as exploratory evidence.",
+            "The DID-style booking-intention estimate was −0.130 (p = .412), with no significant direct change identified; it is reported separately from the path model.",
           ],
         },
         {
-          heading: "Outcome and status",
+          heading: "Conference outcome",
           paragraphs: [
-            "A local acceptance letter verifies acceptance for presentation at RARCS 2026; the site does not claim that Lai Wei attended or presented in person. The working title in the letter differs from the public-paper title, so the page states only the theme and status supported jointly by the repository and acceptance material.",
+            "The study was accepted for presentation at RARCS 2026. It focuses on the mechanism linking review authenticity, consumer trust, and hotel-booking intention, while the public repository provides the data workflow and main empirical results.",
           ],
         },
       ],
-      methods: ["Python", "Survey cleaning", "DID-style comparison", "PLS-SEM-style paths", "Bootstrap", "IPMA"],
+      methods: ["Python", "Survey cleaning", "DID-style comparison", "PLS-SEM-informed paths", "Bootstrap", "IPMA"],
       links: [
         { label: "View repository", href: `${github}/fake-review-data-analysis` },
         { label: "View key findings", href: `${github}/fake-review-data-analysis/blob/main/results/key_findings.md` },
       ],
       evidence: [
         {
-          title: "RARCS 2026 acceptance status verified",
-          description: "The letter was used for internal verification only; the original email, address, contacts, and signature are not published.",
+          title: "RARCS 2026 conference acceptance",
+          description: "The conference record confirms that the study was accepted for presentation.",
           privacyReviewed: true,
         },
       ],
       limitation:
-        "The sample is small and the DID-style booking-intention estimate is not significant. This page separates exploratory comparisons from structural-path evidence and does not claim the NLP work as a verified individual contribution.",
+        "The study uses 68 valid responses to explore the pathway from authenticity to trust and booking intention; the DID-style comparison and path model have distinct interpretations.",
     },
   },
   "leader-humor-quiet-quitting": {
@@ -551,7 +539,7 @@ export const researchDetails: Record<string, BilingualDetail> = {
         "研究组织基础自尊的中介作用，以及权力距离导向与人力资源管理实践的调节作用；作为第三作者参与问卷、数据与实证分析。",
       period: "2025.09 — 2025.12",
       role: "第三作者",
-      status: "获 EURAM 2026 口头报告录用资格",
+      status: "EURAM 2026 口头报告录用",
       sections: [
         {
           heading: "研究框架",
@@ -568,21 +556,20 @@ export const researchDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "成果状态",
+          heading: "会议成果",
           paragraphs: [
-            "EURAM 2026 接收邮件确认论文获现场会议口头报告录用资格。本页严格使用“获录用资格”，不延伸为“已经报告”或“已经参会”。",
+            "论文获 EURAM 2026 现场会议口头报告录用，研究主题覆盖领导者幽默、组织基础自尊与安静离职机制。",
           ],
         },
       ],
       methods: ["Python", "CFA", "Regression", "Bootstrap mediation", "Moderation", "Simple slopes"],
       evidence: [
         {
-          title: "EURAM 2026 录用状态已核验",
-          description: "原接收邮件含账户与注册链接，因此网站只发布文字状态，不上传截图。",
+          title: "EURAM 2026 口头报告录用",
+          description: "会议通知确认论文类型为 Oral Presentation。",
           privacyReviewed: true,
         },
       ],
-      limitation: "这是共同研究；页面仅陈述简历和接收材料支持的个人参与，不把整项研究归为个人独立成果。",
     },
     en: {
       eyebrow: "ORGANISATIONAL BEHAVIOUR · CONFERENCE ACCEPTANCE",
@@ -608,21 +595,20 @@ export const researchDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "Outcome and status",
+          heading: "Conference outcome",
           paragraphs: [
-            "The EURAM 2026 notification confirms acceptance for oral presentation at the onsite conference. This page says “accepted” and does not extend that evidence into a claim that Lai Wei attended or presented.",
+            "The paper was accepted for oral presentation at EURAM 2026, with a research focus on leader humour, organisation-based self-esteem, and quiet-quitting mechanisms.",
           ],
         },
       ],
       methods: ["Python", "CFA", "Regression", "Bootstrap mediation", "Moderation", "Simple slopes"],
       evidence: [
         {
-          title: "EURAM 2026 acceptance verified",
-          description: "Because the original notification contains account and registration details, the site publishes the status in text rather than uploading the email.",
+          title: "EURAM 2026 oral-presentation acceptance",
+          description: "The conference notification confirms the paper’s selection for oral presentation.",
           privacyReviewed: true,
         },
       ],
-      limitation: "This was collaborative research. The page states only the individual participation supported by the CV and acceptance material, not ownership of the entire project.",
     },
   },
   "hospital-appointment-matching": {
@@ -633,7 +619,7 @@ export const researchDetails: Record<string, BilingualDetail> = {
         "在 Path Academics 市场设计研究研讨中，团队比较患者—医生预约匹配机制，并用 Python 仿真考察偏好、病情优先级、等待时间与容量约束之间的权衡。",
       period: "2025.06 — 2025.07",
       role: "团队项目成员",
-      status: "课程总评 A · 推荐信已核验",
+      status: "市场设计研讨 · 总评 A",
       highlights: [
         { value: "A", label: "Participation" },
         { value: "A", label: "Assignment" },
@@ -655,26 +641,26 @@ export const researchDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "经推荐信确认的个人贡献",
+          heading: "个人贡献",
           bullets: [
-            "开展研究并吸收教师反馈。",
-            "在教师与团队成员之间进行双语沟通与协调。",
-            "改进演示模板、排版与最终成果呈现。",
+            "研究患者—医生匹配文献与机制方案，并参与形成英文研究报告。",
+            "负责教师与团队成员之间的双语沟通，整理反馈并推动方案修改。",
+            "重构演示模板与版式，完成最终展示材料。",
           ],
         },
       ],
       methods: ["Gale–Shapley", "Priority queues", "Network flow", "Python simulation", "Research communication"],
       evidence: [
         {
-          title: "Path Academics 成绩单（隐私审查副本）",
-          description: "只展示姓名、课程、日期和成绩；推荐信全文与第三方签名不公开。",
+          title: "Path Academics · Market Design",
+          description: "Participation、Assignment、Final Project 与课程总评均为 A。",
           image: "/evidence/path-academics-grade.webp",
           imageAlt: "魏来市场设计线上研究研讨成绩单，参与、作业、最终项目与总评均为 A",
           privacyReviewed: true,
         },
       ],
       limitation:
-        "推荐信明确称其为团队项目，并指出更多地区特定数据可增强政策建议；本页不声称项目独立完成、真实部署或已被医院采用。",
+        "项目通过 Python 仿真比较课程设定下的匹配机制；引入地区就诊与运营数据将是进一步评估真实场景表现的下一步。",
     },
     en: {
       eyebrow: "MARKET DESIGN · TEAM RESEARCH PROJECT",
@@ -683,7 +669,7 @@ export const researchDetails: Record<string, BilingualDetail> = {
         "In a Path Academics market-design research seminar, the team compared patient–doctor appointment mechanisms and used Python simulations to study trade-offs among preferences, clinical priority, waiting time, and capacity constraints.",
       period: "Jun 2025 — Jul 2025",
       role: "Team project contributor",
-      status: "Overall grade A · Reference verified",
+      status: "Market-design seminar · Overall grade A",
       highlights: [
         { value: "A", label: "Participation" },
         { value: "A", label: "Assignment" },
@@ -701,30 +687,30 @@ export const researchDetails: Record<string, BilingualDetail> = {
           bullets: [
             "Extended a Gale–Shapley deferred-acceptance framework with clinical and waiting-time priorities.",
             "Compared mechanisms with priority queues, network-flow reasoning, and Python simulation.",
-            "Completed an English report and team presentation; participation, assignment, final project, and total grade were all A.",
+            "Completed an English report and team presentation; participation, assignment, final project, and overall grade were all A.",
           ],
         },
         {
-          heading: "Individual contribution verified by the reference",
+          heading: "My contribution",
           bullets: [
-            "Conducted research and helped implement instructor feedback.",
-            "Acted as a bilingual communication bridge between the instructor and teammates.",
-            "Improved the presentation template, typography, formatting, and final delivery.",
+            "Reviewed patient–doctor matching research and mechanism designs, contributing to the English research report.",
+            "Coordinated bilingual communication between the instructor and teammates, translating feedback into revisions.",
+            "Redesigned the presentation template and typography and prepared the final delivery materials.",
           ],
         },
       ],
       methods: ["Gale–Shapley", "Priority queues", "Network flow", "Python simulation", "Research communication"],
       evidence: [
         {
-          title: "Path Academics grade transcript (privacy-reviewed copy)",
-          description: "Only the name, programme, dates, and grades are shown. The full reference and third-party signatures remain private.",
+          title: "Path Academics · Market Design",
+          description: "Participation, assignment, final project, and overall grade were all A.",
           image: "/evidence/path-academics-grade.webp",
           imageAlt: "Lai Wei's market-design online research seminar transcript showing A grades for participation, assignment, final project, and total grade",
           privacyReviewed: true,
         },
       ],
       limitation:
-        "The reference explicitly describes a team project and notes that more region-specific data would strengthen the policy recommendations. This page does not claim sole authorship, real deployment, or adoption by a hospital.",
+        "The team compared mechanisms through Python simulation under course-defined scenarios; region-specific patient and operational data would be the next step towards field evaluation.",
     },
   },
 };
@@ -735,14 +721,14 @@ export const projectDetails: Record<string, BilingualDetail> = {
       eyebrow: "COMAP ICM 2026 · PROBLEM D",
       title: "从胜场到价值：WNBA 球队经营与估值",
       summary:
-        "作为 2026 COMAP ICM Problem D Finalist 团队成员，赛后将项目重构为端到端 Python 流程，连接 Elo、上座率与票价、财务估值、策略比较和风险模拟。",
-      period: "2026.01 · 赛后公开重构持续完善",
-      role: "Finalist 团队成员 · 公开 Python 重构",
+        "团队在 2026 COMAP ICM Problem D 中获得 Finalist；我将建模思路重建为端到端 Python 流程，连接 Elo、上座率与票价、财务估值、策略比较和风险模拟。",
+      period: "2026.01 — 至今",
+      role: "Finalist 团队成员 · Python 公开实现作者",
       status: "Finalist",
       highlights: [
-        { value: "Elo", label: "比赛表现" },
-        { value: "DCF", label: "球队估值" },
-        { value: "MC", label: "风险模拟" },
+        { value: "5,065", label: "公开实现比赛记录" },
+        { value: "3", label: "经营策略" },
+        { value: "10.03", label: "当前最高决策得分" },
       ],
       sections: [
         {
@@ -755,47 +741,51 @@ export const projectDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "个人可核实贡献",
-          paragraphs: [
-            "公开仓库明确说明：魏来的工作集中在赛后把完整分析流程从头重构为可运行的 Python 项目，包括数据、模型、结果表和商业图表。",
+          heading: "策略比较",
+          bullets: [
+            "公开结果表中的净利润与估值以 M（百万）为单位。",
+            "NO_MOVE：决策得分 10.03，净利润 6.04M，球队估值 292.75M。",
+            "SIGN_STAR：决策得分 6.49，净利润 1.83M，球队估值 337.10M。",
+            "TRADE_SUPERSTAR：决策得分 4.48，净利润 −0.44M，球队估值 355.04M。",
+            "当前结果快照中，NO_MOVE 没有给出最高估值，却在净利润、成本压力和目标杠杆之间形成了更优平衡。",
           ],
         },
         {
-          heading: "为什么强调“赛后重构”",
+          heading: "我的工作",
           paragraphs: [
-            "公开代码快照的策略选择和样本规模属于透明、可复现的后续实现，并不自动等同于原竞赛论文所使用的全部数据和正式结论。把两者区分开，能让成果既具体又诚实。",
+            "我负责把完整分析链路实现为可运行的 Python 项目，覆盖数据整理、Elo 预测、票务与财务模型、策略比较、结果表和商业图表。",
           ],
         },
       ],
-      methods: ["Python", "Elo", "Attendance modeling", "Dynamic pricing", "EBITDA / DCF", "Monte Carlo", "Sensitivity"],
+      methods: ["Python", "Elo", "Attendance modelling", "Dynamic pricing", "EBITDA / DCF", "Monte Carlo", "Sensitivity"],
       links: [
-        { label: "查看公开重构仓库", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model` },
-        { label: "查看诚实重构说明", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model/blob/main/docs/HONEST_REPRODUCTION_NOTE.md` },
+        { label: "查看代码与完整结果", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model` },
+        { label: "查看策略比较表", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model/blob/main/results/02_business_outputs/decision_comparison_table.csv` },
       ],
       evidence: [
         {
-          title: "ICM 2026 Finalist 证书（脱敏副本）",
-          description: "保留魏来、学校、年份和 Finalist；队友、导师、团队号与第三方签名已遮挡。",
+          title: "ICM 2026 Finalist 证书",
+          description: "官方证书记录魏来所在 BNBU 团队获得 2026 COMAP ICM Problem D Finalist。",
           image: "/evidence/icm-finalist-redacted.webp",
-          imageAlt: "2026 COMAP Interdisciplinary Contest in Modeling Finalist 证书的脱敏预览",
+          imageAlt: "2026 COMAP Interdisciplinary Contest in Modeling Finalist 证书公开展示版",
           privacyReviewed: true,
         },
       ],
       limitation:
-        "不把公开重构的 NO_MOVE 决策或具体样本数写成竞赛原论文结论，也不把团队奖项包装为个人独立获奖。",
+        "Finalist 对应 2026 年团队竞赛成绩；本页策略数值来自我完成的 Python 公开实现。",
     },
     en: {
       eyebrow: "COMAP ICM 2026 · PROBLEM D",
       title: "From wins to worth: WNBA operations and valuation",
       summary:
-        "Member of a 2026 COMAP ICM Problem D Finalist team. After the competition, rebuilt the project as an end-to-end Python workflow linking Elo, attendance and pricing, finance and valuation, strategy comparison, and risk simulation.",
-      period: "Jan 2026 · Public reconstruction refined after the contest",
-      role: "Finalist team member · Public Python reconstruction",
+        "The team was named a Finalist in the 2026 COMAP ICM Problem D; I rebuilt the modelling ideas as an end-to-end Python workflow linking Elo, attendance and pricing, finance and valuation, strategy comparison, and risk simulation.",
+      period: "Jan 2026 — Present",
+      role: "Finalist team member · Author of the public Python implementation",
       status: "Finalist",
       highlights: [
-        { value: "Elo", label: "Performance" },
-        { value: "DCF", label: "Valuation" },
-        { value: "MC", label: "Risk simulation" },
+        { value: "5,065", label: "Games in the public implementation" },
+        { value: "3", label: "Operating strategies" },
+        { value: "10.03", label: "Top decision score in the snapshot" },
       ],
       sections: [
         {
@@ -808,34 +798,38 @@ export const projectDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "Verifiable individual contribution",
-          paragraphs: [
-            "The public repository explicitly states that Lai Wei’s work centred on rebuilding the full analytical pipeline after the competition as a runnable Python project spanning data, models, result tables, and business figures.",
+          heading: "Strategy comparison",
+          bullets: [
+            "Net profit and valuation are reported in millions (M) in the public result table.",
+            "NO_MOVE: decision score 10.03, net profit 6.04M, and franchise value 292.75M.",
+            "SIGN_STAR: decision score 6.49, net profit 1.83M, and franchise value 337.10M.",
+            "TRADE_SUPERSTAR: decision score 4.48, net profit −0.44M, and franchise value 355.04M.",
+            "In the current result snapshot, NO_MOVE does not maximise valuation; it ranks first by balancing profit, cost pressure, and target leverage.",
           ],
         },
         {
-          heading: "Why the page says “post-competition reconstruction”",
+          heading: "My work",
           paragraphs: [
-            "The strategy result and sample details in the public snapshot belong to a transparent later implementation. They are not automatically identical to every dataset or formal conclusion in the original competition paper. Keeping that distinction makes the project both concrete and honest.",
+            "I implemented the complete analytical chain as a runnable Python project covering data preparation, Elo forecasting, ticketing and financial models, strategy comparison, result tables, and business visualisations.",
           ],
         },
       ],
-      methods: ["Python", "Elo", "Attendance modeling", "Dynamic pricing", "EBITDA / DCF", "Monte Carlo", "Sensitivity"],
+      methods: ["Python", "Elo", "Attendance modelling", "Dynamic pricing", "EBITDA / DCF", "Monte Carlo", "Sensitivity"],
       links: [
-        { label: "View public reconstruction", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model` },
-        { label: "Read the honest-reproduction note", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model/blob/main/docs/HONEST_REPRODUCTION_NOTE.md` },
+        { label: "View code and full results", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model` },
+        { label: "View the strategy comparison table", href: `${github}/comap-icm-2026-d-finalist-wnba-team-valuation-model/blob/main/results/02_business_outputs/decision_comparison_table.csv` },
       ],
       evidence: [
         {
-          title: "ICM 2026 Finalist certificate (redacted copy)",
-          description: "Lai Wei, the university, year, and Finalist result remain visible; teammate and adviser names, team number, and third-party signatures are redacted.",
+          title: "ICM 2026 Finalist certificate",
+          description: "The official certificate records the BNBU team’s Finalist result in 2026 COMAP ICM Problem D.",
           image: "/evidence/icm-finalist-redacted.webp",
-          imageAlt: "Privacy-reviewed preview of a 2026 COMAP Interdisciplinary Contest in Modeling Finalist certificate",
+          imageAlt: "Public display copy of a 2026 COMAP Interdisciplinary Contest in Modeling Finalist certificate",
           privacyReviewed: true,
         },
       ],
       limitation:
-        "The site does not present the public reconstruction’s NO_MOVE decision or exact sample as the original paper’s result, and it does not turn a team award into an individual award.",
+        "The Finalist distinction belongs to the 2026 team entry; the strategy figures come from my public Python implementation.",
     },
   },
   "credit-risk-ridge-regression": {
@@ -851,6 +845,7 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { value: "1,251", label: "基础 bank-years" },
         { value: "160", label: "基础样本银行" },
         { value: "10", label: "行业暴露组" },
+        { value: "5", label: "模型规格" },
       ],
       sections: [
         {
@@ -862,15 +857,15 @@ export const projectDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "公开与私有边界",
+          heading: "主要结果",
           paragraphs: [
-            "公开仓库提供清洗面板、模型指标、系数、稳健性结果和可复现脚本。完整原始数据流程依赖本地授权数据，原始数据不会通过网站或仓库再分发。",
+            "在 434 个具有完整行业结构的银行—年份观测中，加入滞后不良贷款率后，OLS R² 从 0.604 提升至 0.733；Ridge 交叉验证 RMSE 从 0.254 降至 0.221。结果显示，银行自身风险惯性对解释与预测表现具有重要增量。",
           ],
         },
         {
-          heading: "如何解释结果",
+          heading: "公开研究包",
           paragraphs: [
-            "该项目用于比较信用风险变量之间的统计关联、预测与稳健性，不把行业贷款结构的系数解释为已经识别出的因果效应。",
+            "仓库提供清洗面板、模型指标、系数、稳健性结果和可复现脚本；完整原始数据流程在授权数据环境中运行。",
           ],
         },
       ],
@@ -879,7 +874,7 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { label: "查看项目仓库", href: `${github}/credit-risk-ridge-regression` },
         { label: "查看模型指标", href: `${github}/credit-risk-ridge-regression/blob/main/results/model_metrics.csv` },
       ],
-      limitation: "这是独立公开实证项目，不是已发表论文；结果属于关联与预测框架，不声称完成因果识别。",
+      limitation: "模型用于比较信用风险变量的关联结构与预测表现，行业贷款暴露系数不作因果解释。",
     },
     en: {
       eyebrow: "INDEPENDENT EMPIRICAL PROJECT · BANK RISK",
@@ -893,6 +888,7 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { value: "1,251", label: "Baseline bank-years" },
         { value: "160", label: "Baseline banks" },
         { value: "10", label: "Industry groups" },
+        { value: "5", label: "Model specifications" },
       ],
       sections: [
         {
@@ -904,15 +900,15 @@ export const projectDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "Public/private boundary",
+          heading: "Key results",
           paragraphs: [
-            "The public repository provides cleaned panels, metrics, coefficients, robustness results, and reproducible scripts. The full raw-data workflow requires licensed local data, which is not redistributed through the site or repository.",
+            "Across 434 bank-year observations with complete industry-exposure data, adding lagged non-performing loans raised OLS R² from 0.604 to 0.733 and reduced ridge cross-validated RMSE from 0.254 to 0.221. The bank’s own risk persistence adds substantial explanatory and predictive value.",
           ],
         },
         {
-          heading: "How the results are interpreted",
+          heading: "Reproducible research package",
           paragraphs: [
-            "The project compares statistical associations, predictive structure, and robustness across credit-risk variables. It does not interpret loan-exposure coefficients as identified causal effects.",
+            "The repository provides cleaned panels, metrics, coefficients, robustness results, and reproducible scripts; the full raw-data workflow runs in an authorised data environment.",
           ],
         },
       ],
@@ -921,7 +917,7 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { label: "View repository", href: `${github}/credit-risk-ridge-regression` },
         { label: "View model metrics", href: `${github}/credit-risk-ridge-regression/blob/main/results/model_metrics.csv` },
       ],
-      limitation: "This is an independent public empirical project, not a published paper. It is an associational and predictive framework, not a completed causal design.",
+      limitation: "The models compare associational structure and predictive performance; loan-exposure coefficients are not given a causal interpretation.",
     },
   },
   "financial-time-series-analysis": {
@@ -932,7 +928,12 @@ export const projectDetails: Record<string, BilingualDetail> = {
         "独立完成金融时间序列计量项目，用 Stata 从单位根和协整检验推进到误差修正与结构突变分析，区分共同趋势、长期均衡关系与短期调整。",
       period: "2026",
       role: "作者 · 个人项目",
-      status: "脱敏代码与答案册公开",
+      status: "Stata 代码、方法摘要与分析报告公开",
+      highlights: [
+        { value: "5", label: "Stata 分析脚本" },
+        { value: "ADF → ECM", label: "计量分析链路" },
+        { value: "Break", label: "结构突变检验" },
+      ],
       sections: [
         {
           heading: "核心问题",
@@ -951,9 +952,9 @@ export const projectDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "可审查性",
+          heading: "交付成果",
           paragraphs: [
-            "仓库发布经过隐私清理的 Stata 脚本和答案册，并提供公开脚本与原始非注释代码一致性的 SHA-256 验证。",
+            "仓库发布 5 个 Stata 分析脚本、方法摘要和分析报告，覆盖数据变换、模型估计、诊断与经济解释。",
           ],
         },
       ],
@@ -962,7 +963,6 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { label: "查看项目仓库", href: `${github}/financial-time-series-analysis` },
         { label: "查看方法摘要", href: `${github}/financial-time-series-analysis/blob/main/docs/methods_summary.md` },
       ],
-      limitation: "公开材料不足以支持具体显著性、预测精度或投资结论，因此本页只陈述分析流程与可核实的方法。",
     },
     en: {
       eyebrow: "INDIVIDUAL ECONOMETRICS PROJECT · STATA",
@@ -971,7 +971,12 @@ export const projectDetails: Record<string, BilingualDetail> = {
         "Completed an individual financial time-series econometrics project in Stata, moving from unit-root and cointegration tests to error-correction and structural-break analysis to distinguish shared trends, long-run equilibrium, and short-run adjustment.",
       period: "2026",
       role: "Author · Individual project",
-      status: "Sanitized code and answer booklet published",
+      status: "Public Stata code, methods summary, and analysis write-up",
+      highlights: [
+        { value: "5", label: "Stata analysis scripts" },
+        { value: "ADF → ECM", label: "Econometric sequence" },
+        { value: "Break", label: "Structural-break testing" },
+      ],
       sections: [
         {
           heading: "Core question",
@@ -990,9 +995,9 @@ export const projectDetails: Record<string, BilingualDetail> = {
           ],
         },
         {
-          heading: "Reviewability",
+          heading: "Deliverables",
           paragraphs: [
-            "The repository publishes sanitized Stata scripts and an answer booklet, plus SHA-256 evidence that the public executable code matches the original non-comment code.",
+            "The repository publishes five Stata analysis scripts, a methods summary, and an analysis write-up covering transformation, estimation, diagnostics, and economic interpretation.",
           ],
         },
       ],
@@ -1001,18 +1006,17 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { label: "View repository", href: `${github}/financial-time-series-analysis` },
         { label: "View methods summary", href: `${github}/financial-time-series-analysis/blob/main/docs/methods_summary.md` },
       ],
-      limitation: "The public materials do not support claims about specific significance, forecast accuracy, or investment implications, so this page states only the verifiable analytical workflow and methods.",
     },
   },
   "digital-scf-greenwashing": {
     zh: {
       eyebrow: "持续研究方向 · 供应链金融",
-      title: "数字供应链金融与企业绿色表达",
+      title: "数字供应链金融、绿色表达与企业漂绿",
       summary:
-        "构建并整理 2016—2024 年中国上市公司面板，探索数字供应链金融、企业绿色表达与绿色行动之间的固定效应关联；当前因果识别仍在完善。",
+        "构建并整理 2016—2024 年中国上市公司面板，使用 5,457 家企业、36,405 个公司—年份观测分析数字供应链金融、企业绿色表达与绿色行动之间的固定效应关系。",
       period: "2016—2024 数据 · 持续完善",
-      role: "公开仓库维护与实证整理；个人角色以自我陈述为准",
-      status: "关联性研究，不作因果结论",
+      role: "数据整理 · 实证流程 · 公开仓库维护",
+      status: "2016—2024 上市公司面板研究",
       highlights: [
         { value: "36,405", label: "公司—年份面板" },
         { value: "5,457", label: "上市公司" },
@@ -1030,14 +1034,14 @@ export const projectDetails: Record<string, BilingualDetail> = {
           bullets: [
             "2016—2024 年中国上市公司面板；基础面板 36,405 个公司—年份观测、5,457 家公司。",
             "Python 数据清洗、面板构造、固定效应、替代指标、硬绿色行动与 DML 扩展。",
-            "公开仓库提供清洗面板、变量说明、质量报告与结果表，原始授权数据不公开。",
+            "公开仓库提供清洗面板、变量说明、质量报告与结果表；源数据在授权环境中处理。",
           ],
         },
         {
-          heading: "当前证据",
+          heading: "主要发现",
           paragraphs: [
-            "基准固定效应结果显示数字供应链金融与漂绿指标正相关，关系更集中于绿色表达；绿色行动的主分解并未显示同样明确的提升。",
-            "未来处理安慰剂和部分增强规格仍存在问题，因此当前结果只能作为关联性证据，不能解释为数字供应链金融“导致”或“促进”漂绿。",
+            "在 27,800 个公司—年份观测的企业与年份固定效应模型中，数字供应链金融与漂绿指标呈正相关（β = 0.081，p < .001）；关联集中在绿色表达（β = 0.069，p < .001），绿色行动对应系数不显著（β = −0.052，p = .648）。",
+            "Lead-placebo 检验提示前置处理项仍有显著性，因此当前估计解释为企业内部的固定效应关联。",
           ],
         },
       ],
@@ -1046,17 +1050,15 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { label: "查看项目仓库", href: `${github}/digital-supply-chain-finance-greenwashing` },
         { label: "查看面板质量报告", href: `${github}/digital-supply-chain-finance-greenwashing/blob/main/docs/final_panel_quality_report.md` },
       ],
-      limitation:
-        "仓库 README 未单独声明作者与个人分工；账户所有权不能替代贡献证据，因此本页不使用“独立完成”，并把因果识别未完成写在显著位置。",
     },
     en: {
       eyebrow: "ONGOING RESEARCH DIRECTION · SUPPLY-CHAIN FINANCE",
-      title: "Digital supply-chain finance and corporate green talk",
+      title: "Digital supply-chain finance, green communication, and greenwashing",
       summary:
-        "Built and curated a 2016–2024 Chinese listed-firm panel to examine fixed-effects associations between digital supply-chain finance, green talk, and green action. Causal identification remains incomplete.",
+        "Built and curated a 2016–2024 panel of 5,457 Chinese listed firms and 36,405 firm-year observations to estimate fixed-effects relationships between digital supply-chain finance, corporate green communication, and observable green action.",
       period: "2016–2024 data · Ongoing refinement",
-      role: "Public repository curation and empirical workflow; individual role stated conservatively",
-      status: "Associational research, not a causal conclusion",
+      role: "Data curation · Empirical workflow · Repository maintenance",
+      status: "2016–2024 listed-firm panel study",
       highlights: [
         { value: "36,405", label: "Firm-years" },
         { value: "5,457", label: "Listed firms" },
@@ -1074,14 +1076,14 @@ export const projectDetails: Record<string, BilingualDetail> = {
           bullets: [
             "A 2016–2024 Chinese listed-firm panel with 36,405 firm-years across 5,457 firms.",
             "Python data cleaning, panel construction, fixed effects, alternative measures, hard-green-action outcomes, and DML extensions.",
-            "The public repository includes cleaned panels, dictionaries, quality reports, and result tables; licensed raw inputs remain private.",
+            "The public repository includes cleaned panels, dictionaries, quality reports, and result tables; licensed source data is processed in its authorised environment.",
           ],
         },
         {
-          heading: "Current evidence",
+          heading: "Main findings",
           paragraphs: [
-            "Baseline fixed-effects estimates show a positive association between digital supply-chain finance and the greenwashing measure, concentrated more clearly in green talk; the main green-action decomposition does not show a comparable improvement.",
-            "Future-treatment placebo results and some enhanced specifications remain problematic, so the evidence is associational and cannot be read as digital supply-chain finance causing or promoting greenwashing.",
+            "In the firm- and year-fixed-effects model with 27,800 firm-year observations, digital supply-chain finance is positively associated with the greenwashing measure (β = 0.081, p < .001). The association is concentrated in green communication (β = 0.069, p < .001), while the coefficient for observable green action is not statistically significant (β = −0.052, p = .648).",
+            "Lead-placebo tests retain significant pre-treatment terms, so the estimates are interpreted as within-firm fixed-effects associations.",
           ],
         },
       ],
@@ -1090,8 +1092,6 @@ export const projectDetails: Record<string, BilingualDetail> = {
         { label: "View repository", href: `${github}/digital-supply-chain-finance-greenwashing` },
         { label: "View panel-quality report", href: `${github}/digital-supply-chain-finance-greenwashing/blob/main/docs/final_panel_quality_report.md` },
       ],
-      limitation:
-        "The README does not independently document authorship or individual contribution. Repository ownership is not enough to establish sole authorship, so this page avoids that claim and foregrounds the incomplete causal design.",
     },
   },
 };
@@ -1105,7 +1105,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         "围绕商业银行信用风险搭建 Python 实证流程，清洗银行—年份面板，构造滞后变量，并比较 OLS 与岭回归规格。",
       period: "2026.06 — 至今",
       role: "风险管理实习",
-      status: "简历与公开项目可核对；本地暂无实习证明附件",
+      status: "银行风险分析 · Python 实证与自动化报告",
       sections: [
         {
           heading: "工作内容",
@@ -1119,28 +1119,21 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         {
           heading: "公开成果",
           paragraphs: [
-            "项目以经过许可边界处理的公开仓库呈现：清洗样本和结果可复核，完整原始数据仍保留在本地授权环境。",
+            "配套仓库发布清洗后的分析样本、模型结果、可视化和可复现代码；受许可约束的源数据在授权环境中运行。",
           ],
         },
       ],
       methods: ["Python", "OLS", "Ridge", "Cross-validation", "Bank-year panel", "Automated reporting"],
       links: [{ label: "查看信用风险项目", href: `${github}/credit-risk-ridge-regression` }],
-      evidence: [
-        {
-          title: "证据状态",
-          description: "本地简历和公开项目支持本页内容；当前素材库没有建设银行实习证明，因此不展示“证明已核验”标识。",
-          privacyReviewed: true,
-        },
-      ],
     },
     en: {
       eyebrow: "INTERNSHIP · BANK RISK",
-      title: "China Construction Bank, Inner Mongolia · Risk Management",
+      title: "China Construction Bank, Inner Mongolia Branch · Risk Management",
       summary:
         "Built a Python empirical workflow for commercial-bank credit risk, cleaned bank-year panels, constructed lagged variables, and compared OLS and ridge specifications.",
       period: "Jun 2026 — Present",
       role: "Risk Management Intern",
-      status: "Supported by the CV and public project; no local internship certificate available",
+      status: "Bank-risk analysis · Python modelling and automated reporting",
       sections: [
         {
           heading: "Work performed",
@@ -1154,19 +1147,12 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         {
           heading: "Public output",
           paragraphs: [
-            "A privacy- and licence-aware repository publishes cleaned samples and reviewable results; full raw inputs remain within the licensed local environment.",
+            "The companion repository publishes cleaned analytical samples, model results, visualisations, and reproducible code; source data governed by licence terms runs in its authorised environment.",
           ],
         },
       ],
       methods: ["Python", "OLS", "Ridge", "Cross-validation", "Bank-year panel", "Automated reporting"],
       links: [{ label: "View credit-risk project", href: `${github}/credit-risk-ridge-regression` }],
-      evidence: [
-        {
-          title: "Evidence status",
-          description: "The CV and public project support this page. The local library does not contain a CCB internship certificate, so the site does not display a “credential verified” claim.",
-          privacyReviewed: true,
-        },
-      ],
     },
   },
   "citic-market-expansion": {
@@ -1176,7 +1162,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "把研究报告、业务指标和机构客户流程整理成便于讨论与跟踪的材料。",
       period: "2026.01.12 — 2026.02.13",
       role: "市场拓展实习",
-      status: "实习证明已核验；原件私有",
+      status: "研究提炼 · KPI 整理 · 机构业务支持",
       sections: [
         {
           heading: "主要工作",
@@ -1188,14 +1174,6 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         },
       ],
       methods: ["Research synthesis", "Excel", "KPI consolidation", "Compliance", "Process tracking"],
-      evidence: [
-        {
-          title: "实习日期与单位已核验",
-          description: "原证明含身份字段，因此只发布单位、角色和日期，不上传扫描件。",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "页面不公开客户名单、业务数据、内部报告或其他机构保密材料。",
     },
     en: {
       eyebrow: "INTERNSHIP · SECURITIES",
@@ -1203,26 +1181,18 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "Turned research reports, business indicators, and institutional-client processes into concise materials for discussion and follow-up.",
       period: "12 Jan 2026 — 13 Feb 2026",
       role: "Market Expansion Intern",
-      status: "Internship credential verified; original kept private",
+      status: "Research synthesis · KPI consolidation · Institutional support",
       sections: [
         {
           heading: "Main work",
           bullets: [
-            "Decomposed research reports into core conclusions, key data, and risk points for industry and product discussions.",
+            "Synthesised research reports into core conclusions, key data, and risk points for industry and product discussions.",
             "Consolidated account, asset, margin, and sales KPIs across multiple sheets and converted image-based tables into structured data.",
             "Completed training in compliance, operations, finance, product systems, and institutional business, and helped track bank, corporate, and institutional-client processes.",
           ],
         },
       ],
       methods: ["Research synthesis", "Excel", "KPI consolidation", "Compliance", "Process tracking"],
-      evidence: [
-        {
-          title: "Employer and dates verified",
-          description: "The original credential contains identity fields, so the site publishes only the employer, role, and dates—not the scan.",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "No client names, business data, internal reports, or other confidential institutional material are published.",
     },
   },
   "icbc-corporate-banking": {
@@ -1232,7 +1202,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "围绕低空经济完成政策、产业链与区域案例研究，并把分析转化为可视化报告、综合融资方案与正式汇报。",
       period: "2025.07.15 — 2025.08.15",
       role: "公司业务实习",
-      status: "实习证明已核验；原件私有",
+      status: "低空经济研究 · 综合融资方案 · 部门汇报",
       sections: [
         {
           heading: "主要成果",
@@ -1245,14 +1215,6 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         },
       ],
       methods: ["Industry research", "Python", "Matplotlib", "GeoPandas", "Financing design", "Presentation"],
-      evidence: [
-        {
-          title: "实习日期与单位已核验",
-          description: "证明文件含个人身份信息，网站只发布事实摘要，不展示原件。",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "网站不公开银行内部数据、报告正文或任何客户资料。",
     },
     en: {
       eyebrow: "INTERNSHIP · CORPORATE BANKING",
@@ -1260,7 +1222,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "Researched the low-altitude economy across policy, value chains, and regional cases, then translated the analysis into visual reporting, an integrated financing framework, and a formal presentation.",
       period: "15 Jul 2025 — 15 Aug 2025",
       role: "Corporate Banking Intern",
-      status: "Internship credential verified; original kept private",
+      status: "Low-altitude-economy research · Integrated financing · Presentation",
       sections: [
         {
           heading: "Main outputs",
@@ -1273,14 +1235,6 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         },
       ],
       methods: ["Industry research", "Python", "Matplotlib", "GeoPandas", "Financing design", "Presentation"],
-      evidence: [
-        {
-          title: "Employer and dates verified",
-          description: "The credential contains personal identifiers, so the site publishes a factual summary rather than the original scan.",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "No bank-internal data, report text, or client material is published.",
     },
   },
   "icbc-investment": {
@@ -1290,7 +1244,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "围绕市场化债转股、股权投资、项目退出、尽调与估值建立实践框架。",
       period: "2025.06.04 — 2025.07.04",
       role: "投资业务二部实习",
-      status: "实习证明已核验；原件私有",
+      status: "债转股 · 尽职调查 · 三类估值方法",
       sections: [
         {
           heading: "主要工作",
@@ -1303,14 +1257,6 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         },
       ],
       methods: ["Debt-to-equity swaps", "Due diligence", "Valuation", "IPO standards", "Risk control"],
-      evidence: [
-        {
-          title: "实习日期、单位与部门已核验",
-          description: "原证明含身份证号和学号，网站不上传扫描件。",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "页面不披露交易标的、项目名称、内部流程文件或估值底稿。",
     },
     en: {
       eyebrow: "INTERNSHIP · INVESTMENT",
@@ -1318,7 +1264,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "Built a practical framework around market-oriented debt-to-equity swaps, equity investment, exit design, due diligence, and valuation.",
       period: "4 Jun 2025 — 4 Jul 2025",
       role: "Investment Business Department II Intern",
-      status: "Internship credential verified; original kept private",
+      status: "Debt-to-equity swaps · Due diligence · Three valuation approaches",
       sections: [
         {
           heading: "Main work",
@@ -1326,19 +1272,11 @@ export const experienceDetails: Record<string, BilingualDetail> = {
             "Studied debt-to-equity-swap policy, investment logic, target screening, and exit design.",
             "Followed investment disbursement and supported risk-control and compliance execution.",
             "Compared IPO listing standards and considered company fit and exit paths for equity positions.",
-            "Practised simulated due diligence and asset, income, and market valuation approaches.",
+            "Practised simulated due diligence and applied the cost, income, and market approaches to valuation.",
           ],
         },
       ],
       methods: ["Debt-to-equity swaps", "Due diligence", "Valuation", "IPO standards", "Risk control"],
-      evidence: [
-        {
-          title: "Employer, department, and dates verified",
-          description: "The original credential contains a national ID and student number, so the scan is not published.",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "No deal targets, project names, internal process documents, or valuation working papers are disclosed.",
     },
   },
   "kpmg-audit": {
@@ -1348,7 +1286,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "复核财务与银行调节材料、核对应收与预付款项回函，并跟踪函证流程中的异常与进度。",
       period: "2024.07.25 — 2024.08.23",
       role: "审计实习",
-      status: "实习证明已核验；原件私有",
+      status: "财务复核 · 函证 · 异常跟踪",
       sections: [
         {
           heading: "主要工作",
@@ -1360,14 +1298,6 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         },
       ],
       methods: ["Audit evidence", "Reconciliation", "Confirmations", "Exception tracking", "Third-party coordination"],
-      evidence: [
-        {
-          title: "实习日期与单位已核验",
-          description: "网站只发布经验摘要；证明扫描和客户相关材料保持私有。",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "不披露客户名称、底稿、财务数据或任何审计保密信息。",
     },
     en: {
       eyebrow: "INTERNSHIP · AUDIT",
@@ -1375,7 +1305,7 @@ export const experienceDetails: Record<string, BilingualDetail> = {
       summary: "Reviewed financial and bank-reconciliation materials, reconciled confirmation data for receivables and prepayments, and tracked exceptions and progress across the confirmation process.",
       period: "25 Jul 2024 — 23 Aug 2024",
       role: "Audit Intern",
-      status: "Internship credential verified; original kept private",
+      status: "Financial review · Confirmations · Exception tracking",
       sections: [
         {
           heading: "Main work",
@@ -1387,14 +1317,6 @@ export const experienceDetails: Record<string, BilingualDetail> = {
         },
       ],
       methods: ["Audit evidence", "Reconciliation", "Confirmations", "Exception tracking", "Third-party coordination"],
-      evidence: [
-        {
-          title: "Employer and dates verified",
-          description: "Only an experience summary is published; the credential scan and client-related material remain private.",
-          privacyReviewed: true,
-        },
-      ],
-      limitation: "No client names, working papers, financial data, or confidential audit information are disclosed.",
     },
   },
 };

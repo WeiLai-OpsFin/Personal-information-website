@@ -1919,7 +1919,7 @@ main {
 }
 
 .evidence-copy h3 {
-  margin-top: 1.5rem;
+  margin-top: 0;
   color: var(--navy);
   font-family: var(--serif);
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
@@ -1934,20 +1934,25 @@ main {
   line-height: 1.8;
 }
 
-.limitation-note {
-  display: grid;
-  grid-template-columns: minmax(150px, 0.25fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
-  margin-top: clamp(3rem, 6vw, 5rem);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-left: 4px solid var(--amber);
-  background: rgba(216, 154, 61, 0.09);
+.scope-note {
+  display: block;
+  max-width: 760px;
+  margin-top: clamp(2.25rem, 5vw, 4rem);
+  padding: 1.15rem 0 0;
+  border-top: 1px solid var(--line);
 }
 
-.limitation-note > p:last-child {
-  color: #4e5967;
-  font-size: 0.92rem;
-  line-height: 1.85;
+.scope-note .mini-label {
+  color: var(--muted);
+  font-size: 0.64rem;
+}
+
+.scope-note > p:last-child {
+  max-width: 680px;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
 }
 
 .detail-links {
@@ -2286,7 +2291,6 @@ main {
 
   .detail-band-heading,
   .evidence-card,
-  .limitation-note,
   .detail-links {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -2606,10 +2610,6 @@ main {
   .evidence-image,
   .evidence-overview-image {
     min-height: 220px;
-  }
-
-  .limitation-note {
-    gap: 0.8rem;
   }
 
   .detail-links a {

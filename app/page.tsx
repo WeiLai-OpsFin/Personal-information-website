@@ -30,7 +30,7 @@ const copy = {
     heroEnglishName: "Lai Wei",
     heroTitle: "用数据理解政策、金融与商业决策",
     heroIntro:
-      "应用经济学一等荣誉毕业生，关注政策评估、金融风险与数据驱动决策。我把复杂问题拆解为可检验的假设与可观测变量，再用实证方法与计算模型形成清晰、可复现、可用于决策的证据。",
+      "应用经济学一等荣誉毕业生，研究政策评估、金融风险与数据驱动决策。使用 DID、事件研究、回归和 Python 建模处理城市、企业与银行面板数据，并将结果整理为可复现的分析流程与决策材料。",
     heroPrimary: "查看研究",
     heroSecondary: "访问 GitHub",
     heroPortraitAlt: "魏来身着深蓝西装的正式肖像",
@@ -43,14 +43,14 @@ const copy = {
       education: "02 / 学历与成绩",
       research: "03 / 科研",
       competition: "04 / 竞赛与项目",
-      evidence: "05 / 成果与证据",
+      evidence: "05 / 代表成果",
       experience: "06 / 实践经历",
       life: "07 / 简历之外",
       contact: "08 / 联系",
     },
-    aboutTitle: "关于我：选择真正重要的方向，然后把它做深、做扎实。",
+    aboutTitle: "从应用经济学出发，研究政策、金融与真实企业问题。",
     aboutBody:
-      "我是魏来，一名应用经济学一等荣誉毕业生。我相信稳定、持续、可重复的进步，长期关注金融如何服务实体经济，尤其是供应链金融、贸易融资、供应链韧性与风险管理。我重视逻辑、数据和证据，也愿意诚实说明结论的条件与边界。",
+      "我是魏来，一名应用经济学一等荣誉毕业生。我的研究与项目覆盖长期护理保险政策评估、商业银行信用风险、供应链金融与市场设计；实习经历涵盖审计、投资、公司金融、证券与风险管理。",
     aboutQuote: "好的分析不止给出一个数字，也要说明它从哪里来、意味着什么，以及下一步该做什么。",
     aboutLink: "阅读完整自我介绍",
     capabilities: [
@@ -92,9 +92,9 @@ const copy = {
       "截面与面板数据分析 · A−",
       "金融大数据分析 · A−",
     ],
-    researchTitle: "围绕真实问题组织方法，而不是围绕方法寻找问题。",
+    researchTitle: "从真实问题出发，选择能够回答问题的方法。",
     researchIntro:
-      "研究横跨公共政策、消费者行为、组织行为与市场设计。每个项目都从清晰的问题出发，说明方法、角色与当前成果状态。",
+      "围绕公共政策、消费者行为、组织行为与市场设计，我分别使用城市面板 DID、问卷路径分析、CFA、Bootstrap 和匹配仿真推进研究。",
     researchRole: "角色",
     researchMethod: "方法",
     researchProjects: [
@@ -105,7 +105,7 @@ const copy = {
         period: "2025.09 — 2026.05",
         role: "共同作者",
         status: "本科毕业论文",
-        text: "使用 2011—2019 年城市面板数据评估中国长期护理保险试点的就业与服务供给效应。结果对照护相关就业的正向影响提供了更一致的证据，而医生供给与医疗机构数量的估计较弱或对模型设定较敏感。",
+        text: "基于 2011—2019 年 296 个城市、2,603 个城市—年份观测评估长期护理保险试点。结果显示，照护相关就业的正向变化更稳定，医生供给与医疗机构数量的估计则更依赖模型设定。",
         methods: ["DID", "事件研究", "安慰剂检验", "PSM-DID"],
       },
       {
@@ -113,9 +113,9 @@ const copy = {
         slug: "fake-review-booking",
         title: "网络虚假评论与酒店预订决策",
         period: "2026.02 — 2026.06",
-        role: "第三作者",
-        status: "第三作者 · 小样本探索性研究",
-        text: "负责问卷清理、条件比较、DID 式分析与 PLS-SEM 式路径建模。68 份有效问卷的证据显示，真实性主要通过信任影响预订意向；DID 估计不显著，因此仅作探索性解释。",
+        role: "第三作者 · 数据分析",
+        status: "RARCS 2026 报告录用",
+        text: "主要参与 68 份有效问卷的清理、条件比较、DID 式分析和基于 PLS-SEM 框架的路径建模。评论类型经由真实性与信任影响预订意向的序列间接效应为 0.166（p = .0037）；预订意向的 DID 式估计为 −0.130（p = .412）。",
         methods: ["Python", "PLS-SEM", "Bootstrap", "IPMA"],
       },
       {
@@ -135,31 +135,31 @@ const copy = {
         period: "2025.06 — 2025.07",
         role: "团队项目成员",
         status: "Path Academics 市场设计研讨",
-        text: "在 Aytek Erdil 教授（剑桥大学）授课的线上研究研讨中，设计兼顾偏好、优先级与容量约束的预约匹配机制，并通过 Python 仿真比较不同机制的表现。",
+        text: "在 Aytek Erdil 教授（剑桥大学）授课的市场设计研讨中，与团队比较患者偏好、病情优先级、等待时间与医生容量约束下的匹配机制，并用 Python 仿真评估权衡。",
         methods: ["Gale–Shapley", "优先级队列", "网络流", "Python"],
       },
     ],
     competitionKicker: "COMAP ICM 2026 · Problem D",
     competitionTitle: "职业体育团队经营与估值模型",
     competitionAward: "Finalist",
-    competitionRole: "Finalist 团队成员 · 赛后公开 Python 重构",
+    competitionRole: "Finalist 团队成员 · 端到端 Python 模型重构",
     competitionText:
-      "作为 2026 COMAP ICM Problem D Finalist 团队成员，赛后把项目重构为端到端 Python 流程，连接 Elo 胜率、上座率与动态票价、财务估值、策略比较、情景与 Monte Carlo 风险分析。公开重构与原始竞赛提交严格区分。",
+      "团队在 2026 COMAP ICM Problem D 中获得 Finalist。我进一步将建模思路工程化为端到端 Python 项目，串联 Elo 胜率、上座率与动态票价、DCF 估值、三类经营策略和 Monte Carlo 风险分析。",
     competitionStats: [
-      { value: "Python", label: "赛后公开重构" },
-      { value: "Elo → DCF", label: "端到端框架" },
-      { value: "2026", label: "Finalist" },
+      { value: "5,065", label: "公开实现比赛记录" },
+      { value: "Elo → DCF", label: "端到端模型链路" },
+      { value: "2026", label: "COMAP ICM Finalist" },
     ],
-    competitionLink: "查看竞赛与公开重构详情",
-    featuredProjectsTitle: "更多可审查的公开项目",
-    featuredProjectsIntro: "每个详情页都明确区分个人角色、方法、结果与证据边界。",
+    competitionLink: "查看模型、策略结果与代码",
+    featuredProjectsTitle: "精选公开项目",
+    featuredProjectsIntro: "从数据处理、模型设定到结果输出，完整代码与研究材料可在 GitHub 查看。",
     featuredProjects: [
       {
         slug: "credit-risk-ridge-regression",
         index: "P.01",
         title: "商业银行信用风险与贷款行业暴露",
         status: "独立公开实证项目",
-        text: "搭建银行—年份框架，以十类行业贷款暴露比较 OLS、岭回归、固定效应诊断与稳健性结果。",
+        text: "基础面板覆盖 160 家银行、1,251 个银行—年份观测，其中 42 家银行、434 个观测具有完整行业结构。项目共估计五组 OLS / Ridge 规格，并在完整子样本中比较十类行业暴露。",
       },
       {
         slug: "financial-time-series-analysis",
@@ -172,27 +172,27 @@ const copy = {
         slug: "digital-scf-greenwashing",
         index: "P.03",
         title: "数字供应链金融与企业漂绿",
-        status: "关联性研究 · 因果识别仍在完善",
-        text: "整理大规模上市公司面板，探索数字供应链金融与绿色表达、绿色行动之间的固定效应关联。",
+        status: "2016—2024 上市公司面板研究",
+        text: "基于 5,457 家上市公司、36,405 个公司—年份观测，分析数字供应链金融与绿色表达、绿色行动的固定效应关系；基准关联主要集中于绿色表达。",
       },
     ],
     viewDetail: "查看完整详情",
-    evidenceTitle: "只展示核验事实与脱敏副本。",
+    evidenceTitle: "竞赛、课程与会议中的代表成果。",
     evidenceIntro:
-      "原始成绩单、证件、证明和邮件始终保持私有。这里展示的是经过事实核对的成果状态，以及去除团队号、第三方姓名、签名和联系信息后的低分辨率网页副本。",
+      "从 COMAP ICM Finalist、市场设计课程总评 A，到 EURAM 与 RARCS 会议录用；点击卡片可查看对应项目、方法与公开材料。展示图片已做必要的隐私处理。",
     evidenceItems: [
       {
         title: "COMAP ICM 2026 · Finalist",
-        meta: "官方证书已核验",
-        text: "展示副本仅保留本人姓名、学校、年份与奖项结果。",
+        meta: "Problem D · Finalist",
+        text: "团队围绕 WNBA 球队经营与估值建立决策模型；我进一步完成可运行的 Python 公开实现。",
         image: "/evidence/icm-finalist-redacted.webp",
-        alt: "经过隐私处理的 COMAP ICM 2026 Finalist 成绩证明，只显示魏来、学校、年份与奖项",
+        alt: "COMAP ICM 2026 Finalist 证书公开展示版",
         href: "/projects/icm-2026-wnba",
       },
       {
         title: "Path Academics · Market Design",
         meta: "课程各项与总评均为 A",
-        text: "成绩页无学号、证书号、签名、二维码或第三方联系信息。",
+        text: "完成医院预约匹配机制的英文研究报告、Python 仿真与团队展示。",
         image: "/evidence/path-academics-grade.webp",
         alt: "Path Academics 市场设计课程成绩页，显示魏来各项与总评均为 A",
         href: "/research/hospital-appointment-matching",
@@ -200,19 +200,19 @@ const copy = {
       {
         title: "EURAM 2026",
         meta: "Accepted for oral presentation",
-        text: "现有证据只证明获得口头报告录用资格，不表述为已到场报告。",
+        text: "第三作者研究《领导者幽默与员工安静离职》获口头报告录用。",
         href: "/research/leader-humor-quiet-quitting",
       },
       {
         title: "RARCS 2026",
         meta: "Accepted for presentation",
-        text: "录用状态已核验；因录用函与公开工作题名不同，详情页明确保留这一边界。",
+        text: "第三作者研究覆盖 68 份有效问卷，分析评论真实性如何通过信任影响预订决策。",
         href: "/research/fake-review-booking",
       },
     ],
     experienceTitle: "把研究能力带到真实的金融与商业场景。",
     experienceIntro:
-      "从审计、投资和公司金融到证券与风险管理，我在不同机构中练习同一件事：快速理解问题、核对证据，并把分析转化为可靠判断。",
+      "从审计、投资和公司金融到证券与风险管理，我把研究拆解、数据整理、风险识别、估值与汇报能力应用到不同金融业务场景。",
     experiences: [
       {
         slug: "ccb-risk-management",
@@ -256,11 +256,6 @@ const copy = {
     factsTitle: "个人速写",
     facts: [
       ["姓名", "魏来（Lai Wei）"],
-      ["生日", "2004 年 11 月 4 日"],
-      ["身高", "181 cm"],
-      ["体重", "60 kg"],
-      ["MBTI", "INFJ"],
-      ["星座", "天蝎座"],
       ["爱好", "羽毛球、钢琴"],
       ["手机", "182 4712 9040"],
     ],
@@ -284,10 +279,10 @@ const copy = {
     contactEyebrow: "一起把问题想清楚",
     contactTitle: "研究、升学、金融与数据项目，都欢迎交流。",
     contactBody:
-      "如果你正在寻找一位重视证据、善于建模，也愿意把复杂分析讲清楚的合作伙伴，欢迎联系我。",
+      "如果你正在推进政策评估、金融风险、供应链金融或数据建模项目，欢迎交流研究问题、实证设计与合作机会。",
     phoneLabel: "电话",
     githubLabel: "GitHub",
-    footer: "以证据为起点，以清晰为标准。",
+    footer: "把复杂问题讲清楚，把分析落到行动。",
     backToTop: "返回顶部",
   },
   en: {
@@ -298,7 +293,7 @@ const copy = {
       { id: "education", label: "Academics" },
       { id: "research", label: "Research" },
       { id: "competition", label: "Competition" },
-      { id: "evidence", label: "Evidence" },
+      { id: "evidence", label: "Highlights" },
       { id: "experience", label: "Experience" },
       { id: "life", label: "Beyond" },
       { id: "contact", label: "Contact" },
@@ -309,27 +304,27 @@ const copy = {
     heroEnglishName: "魏来",
     heroTitle: "Turning data into evidence for policy, finance, and business decisions.",
     heroIntro:
-      "A First Class Honours graduate in Applied Economics, interested in policy evaluation, financial risk, and data-driven decision-making. I translate complex questions into testable hypotheses and measurable variables, then use empirical methods and computational models to produce clear, reproducible, decision-ready evidence.",
+      "A First Class Honours graduate in Applied Economics working on policy evaluation, financial risk, and data-driven decisions. I use DID, event studies, regression, and Python modelling across city, firm, and bank panels, turning results into reproducible workflows and decision materials.",
     heroPrimary: "Explore research",
     heroSecondary: "Visit GitHub",
     heroPortraitAlt: "Formal portrait of Lai Wei in a navy suit",
     heroPortraitCaption: "Lai Wei / 魏来",
     heroStatus: "Research · Finance · Data",
     signalLabel: "Current focus",
-    signals: ["Policy evaluation", "Financial risk", "Computational modeling"],
+    signals: ["Policy evaluation", "Financial risk", "Computational modelling"],
     sectionLabels: {
       about: "01 / ABOUT",
       education: "02 / EDUCATION & ACADEMICS",
       research: "03 / RESEARCH",
       competition: "04 / COMPETITION & PROJECTS",
-      evidence: "05 / OUTPUTS & EVIDENCE",
+      evidence: "05 / SELECTED OUTCOMES",
       experience: "06 / EXPERIENCE",
       life: "07 / BEYOND THE CV",
       contact: "08 / CONTACT",
     },
-    aboutTitle: "About me: choose a direction that matters, then build depth over time.",
+    aboutTitle: "From applied economics to policy, finance, and real-sector problems.",
     aboutBody:
-      "I am Lai Wei, a First Class Honours graduate in Applied Economics. I believe in steady, repeatable progress and have a long-term interest in how finance serves the real economy—especially supply-chain finance, trade finance, resilience, and risk management. I value logic, data, and evidence, including honest explanations of where a conclusion stops.",
+      "I am Lai Wei, a First Class Honours graduate in Applied Economics. My work spans long-term-care policy evaluation, commercial-bank credit risk, supply-chain finance, and market design, with experience across audit, investment, corporate banking, securities, and risk management.",
     aboutQuote:
       "Good analysis does more than produce a number. It explains where the number came from, what it means, and what to do next.",
     aboutLink: "Read the full personal statement",
@@ -341,8 +336,8 @@ const copy = {
       },
       {
         number: "02",
-        title: "Statistical & computational modeling",
-        text: "Python, PLS-SEM, CFA, Bootstrap, Monte Carlo, and network flow.",
+        title: "Statistical & computational modelling",
+        text: "Python, PLS-SEM, CFA, bootstrap, Monte Carlo, and network flow.",
       },
       {
         number: "03",
@@ -371,9 +366,9 @@ const copy = {
       "Cross Section & Panel Data Analysis · A−",
       "Financial Big Data Analytics · A−",
     ],
-    researchTitle: "Methods follow the question—not the other way around.",
+    researchTitle: "Start with the question, then choose the method that can answer it.",
     researchIntro:
-      "My work spans public policy, consumer behavior, organizational behavior, and market design. Each project begins with a concrete question and makes the method, role, and current outcome explicit.",
+      "Across public policy, consumer behaviour, organisational behaviour, and market design, I use city-panel DID, survey path analysis, CFA, bootstrap methods, and matching simulations.",
     researchRole: "Role",
     researchMethod: "Methods",
     researchProjects: [
@@ -384,7 +379,7 @@ const copy = {
         period: "Sep 2025 — May 2026",
         role: "Co-author",
         status: "Undergraduate thesis",
-        text: "Evaluated China’s long-term care insurance pilot using 2011–2019 city-level panel data. The evidence is more consistent for positive effects on care-related employment, while estimates for physician supply and medical-institution counts are weaker or sensitive to specification.",
+        text: "Evaluated China’s long-term care insurance pilot across 296 cities and 2,603 city-year observations from 2011–2019. Care-related employment shows the more stable positive change, while physician-supply and institution-count estimates vary more across specifications.",
         methods: ["DID", "Event study", "Placebo tests", "PSM-DID"],
       },
       {
@@ -392,9 +387,9 @@ const copy = {
         slug: "fake-review-booking",
         title: "Fake Online Reviews and Hotel Booking Decisions",
         period: "Feb 2026 — Jun 2026",
-        role: "Third Author",
-        status: "Third author · exploratory small-sample study",
-        text: "Led questionnaire cleaning, condition comparisons, DID-style analysis, and PLS-SEM-style path modeling. Evidence from 68 valid responses suggests authenticity works mainly through trust; the DID estimate was not significant and is treated as exploratory.",
+        role: "Third author · Data analysis",
+        status: "Accepted for presentation at RARCS 2026",
+        text: "Contributed to cleaning, condition comparisons, DID-style estimates, and PLS-SEM-informed path modelling for 68 valid responses. The serial indirect effect of review type via authenticity and trust was 0.166 (p = .0037); the booking-intention DID-style estimate was −0.130 (p = .412).",
         methods: ["Python", "PLS-SEM", "Bootstrap", "IPMA"],
       },
       {
@@ -402,9 +397,9 @@ const copy = {
         slug: "leader-humor-quiet-quitting",
         title: "Leader Humor and Follower Quiet Quitting",
         period: "Sep 2025 — Dec 2025",
-        role: "Third Author",
+        role: "Third author",
         status: "Accepted for oral presentation at EURAM 2026",
-        text: "Examined organization-based self-esteem as a mediator and power-distance orientation and HRM practices as moderators. Contributed to survey design, data preparation, CFA, regression, and Bootstrap analyses.",
+        text: "Examined organization-based self-esteem as a mediator and power-distance orientation and HRM practices as moderators. Contributed to survey design, data preparation, CFA, regression, and bootstrap analyses.",
         methods: ["CFA", "Regression", "Bootstrap", "Moderation"],
       },
       {
@@ -412,33 +407,33 @@ const copy = {
         slug: "hospital-appointment-matching",
         title: "Hospital Appointment Matching Mechanism",
         period: "Jun 2025 — Jul 2025",
-        role: "Project contributor",
+        role: "Team project contributor",
         status: "Path Academics seminar in market design",
-        text: "In an online research seminar taught by Prof. Aytek Erdil of the University of Cambridge, designed an appointment mechanism balancing preferences, priorities, and capacity constraints, then evaluated alternative mechanisms through Python simulations.",
+        text: "In a market-design seminar taught by Prof. Aytek Erdil of the University of Cambridge, I worked with the team to compare appointment mechanisms under preference, clinical-priority, waiting-time, and capacity constraints, using Python simulations to evaluate trade-offs.",
         methods: ["Gale–Shapley", "Priority queues", "Network flow", "Python"],
       },
     ],
     competitionKicker: "COMAP ICM 2026 · PROBLEM D",
     competitionTitle: "Sports-Team Operations and Valuation",
     competitionAward: "Finalist",
-    competitionRole: "Finalist team member · post-competition public Python reconstruction",
+    competitionRole: "Finalist team member · End-to-end Python reconstruction",
     competitionText:
-      "Member of a 2026 COMAP ICM Problem D Finalist team. After the competition, rebuilt the work as an end-to-end Python pipeline spanning Elo forecasting, attendance and dynamic pricing, finance and valuation, strategy comparison, scenarios, and Monte Carlo risk analysis. The public reconstruction is explicitly separated from the original submission.",
+      "The team was named a Finalist in the 2026 COMAP ICM Problem D. I then engineered the modelling ideas into an end-to-end Python project spanning Elo forecasting, attendance and dynamic pricing, DCF valuation, three operating strategies, and Monte Carlo risk analysis.",
     competitionStats: [
-      { value: "Python", label: "Public reconstruction" },
-      { value: "Elo → DCF", label: "End-to-end framework" },
-      { value: "2026", label: "Finalist" },
+      { value: "5,065", label: "Games in the public implementation" },
+      { value: "Elo → DCF", label: "End-to-end model chain" },
+      { value: "2026", label: "COMAP ICM Finalist" },
     ],
-    competitionLink: "Explore the competition and public reconstruction",
-    featuredProjectsTitle: "More reviewable public projects",
-    featuredProjectsIntro: "Every detail page distinguishes role, method, result, and evidence boundary.",
+    competitionLink: "Explore the model, strategy results, and code",
+    featuredProjectsTitle: "Selected public projects",
+    featuredProjectsIntro: "Each repository connects data preparation and model design to reproducible outputs and public research materials.",
     featuredProjects: [
       {
         slug: "credit-risk-ridge-regression",
         index: "P.01",
         title: "Commercial-Bank Credit Risk and Industry Exposure",
         status: "Independent empirical project",
-        text: "Built a bank-year framework with ten industry-exposure groups, comparing OLS and ridge specifications with fixed-effects and robustness diagnostics.",
+        text: "The baseline panel covers 160 banks and 1,251 bank-year observations; 42 banks and 434 observations have complete industry-exposure data. The project estimates five OLS and ridge specifications, using the complete subsample to compare ten loan-exposure groups.",
       },
       {
         slug: "financial-time-series-analysis",
@@ -451,27 +446,27 @@ const copy = {
         slug: "digital-scf-greenwashing",
         index: "P.03",
         title: "Digital Supply-Chain Finance and Greenwashing",
-        status: "Associational study · causal identification incomplete",
-        text: "Curated a large listed-firm panel to examine fixed-effects associations between digital supply-chain finance, green talk, and observable green action.",
+        status: "2016–2024 listed-firm panel study",
+        text: "Analysed 36,405 firm-year observations across 5,457 listed firms. Baseline fixed-effects associations are concentrated more clearly in green communication than in observable green action.",
       },
     ],
     viewDetail: "View full details",
-    evidenceTitle: "Verified facts and privacy-reviewed copies only.",
+    evidenceTitle: "Selected outcomes across competitions, research, and coursework.",
     evidenceIntro:
-      "Original transcripts, identity records, credentials, and emails remain private. The items below are verified outcome summaries or low-resolution web copies with team numbers, third-party names, signatures, and contact details removed.",
+      "Highlights include a COMAP ICM Finalist result, an A in market design, and conference acceptances at EURAM and RARCS. Each card links to the underlying project and public materials; displayed images are redacted where necessary.",
     evidenceItems: [
       {
         title: "COMAP ICM 2026 · Finalist",
-        meta: "Official credential verified",
-        text: "The web copy retains only my name, institution, year, and award result.",
+        meta: "Problem D · Finalist",
+        text: "The team modelled WNBA operations and valuation; I later built the runnable public Python implementation.",
         image: "/evidence/icm-finalist-redacted.webp",
-        alt: "Privacy-reviewed COMAP ICM 2026 Finalist credential showing only Lai Wei, institution, year, and award",
+        alt: "Public display copy of the COMAP ICM 2026 Finalist certificate",
         href: "/projects/icm-2026-wnba",
       },
       {
         title: "Path Academics · Market Design",
         meta: "All components and overall grade: A",
-        text: "The grade page contains no student number, credential number, signature, QR code, or third-party contact details.",
+        text: "Completed an English research report, Python simulation, and team presentation on hospital appointment matching.",
         image: "/evidence/path-academics-grade.webp",
         alt: "Path Academics market-design grade page showing A grades for Lai Wei",
         href: "/research/hospital-appointment-matching",
@@ -479,19 +474,19 @@ const copy = {
       {
         title: "EURAM 2026",
         meta: "Accepted for oral presentation",
-        text: "The evidence confirms acceptance; it does not establish attendance or a completed presentation.",
+        text: "Third-authored research on leader humour and quiet quitting was selected for oral presentation.",
         href: "/research/leader-humor-quiet-quitting",
       },
       {
         title: "RARCS 2026",
         meta: "Accepted for presentation",
-        text: "Acceptance is verified; the detail page preserves the title-version discrepancy in the available records.",
+        text: "Third-authored research used 68 valid responses to study how authenticity and trust shape booking decisions.",
         href: "/research/fake-review-booking",
       },
     ],
     experienceTitle: "Taking research discipline into real financial and business settings.",
     experienceIntro:
-      "Across audit, investment, corporate banking, securities, and risk management, I practice the same fundamentals: understand the problem quickly, verify the evidence, and translate analysis into reliable judgment.",
+      "Across audit, investment, corporate banking, securities, and risk management, I apply research framing, data preparation, risk identification, valuation, and presentation to different financial settings.",
     experiences: [
       {
         slug: "ccb-risk-management",
@@ -535,11 +530,6 @@ const copy = {
     factsTitle: "A quick portrait",
     facts: [
       ["Name", "Lai Wei (魏来)"],
-      ["Born", "4 November 2004"],
-      ["Height", "181 cm"],
-      ["Weight", "60 kg"],
-      ["MBTI", "INFJ"],
-      ["Zodiac", "Scorpio"],
       ["Interests", "Badminton, piano"],
       ["Phone", "+86 182 4712 9040"],
     ],
@@ -563,10 +553,10 @@ const copy = {
     contactEyebrow: "LET’S THINK IT THROUGH",
     contactTitle: "Open to conversations across research, graduate study, finance, and data.",
     contactBody:
-      "If you are looking for someone who values evidence, enjoys modeling, and can explain complex analysis clearly, I would be glad to connect.",
+      "If you are working on policy evaluation, financial risk, supply-chain finance, or data modelling, I would be glad to discuss research questions, empirical design, and collaboration opportunities.",
     phoneLabel: "Phone",
     githubLabel: "GitHub",
-    footer: "Evidence first. Clarity always.",
+    footer: "Clarify the problem. Turn analysis into action.",
     backToTop: "Back to top",
   },
 } as const;
@@ -797,7 +787,7 @@ export default function Home({ initialLanguage }: HomeProps = {}) {
                   <Link
                     className="detail-link"
                     href={`${pathPrefix}/research/${project.slug}`}
-                    aria-label={`${t.viewDetail}：${project.title}`}
+                    aria-label={`${t.viewDetail}: ${project.title}`}
                   >
                     {t.viewDetail} <span aria-hidden="true">→</span>
                   </Link>
@@ -851,7 +841,7 @@ export default function Home({ initialLanguage }: HomeProps = {}) {
                   <Link
                     className="detail-link"
                     href={`${pathPrefix}/projects/${project.slug}`}
-                    aria-label={`${t.viewDetail}：${project.title}`}
+                    aria-label={`${t.viewDetail}: ${project.title}`}
                   >
                     {t.viewDetail} <span aria-hidden="true">→</span>
                   </Link>
@@ -895,7 +885,7 @@ export default function Home({ initialLanguage }: HomeProps = {}) {
                     <Link
                       className="detail-link"
                       href={`${pathPrefix}${item.href}`}
-                      aria-label={`${t.viewDetail}：${item.title}`}
+                      aria-label={`${t.viewDetail}: ${item.title}`}
                     >
                       {t.viewDetail} <span aria-hidden="true">→</span>
                     </Link>
@@ -928,7 +918,7 @@ export default function Home({ initialLanguage }: HomeProps = {}) {
                   <Link
                     className="timeline-detail-link"
                     href={`${pathPrefix}/experience/${experience.slug}`}
-                    aria-label={`${t.viewDetail}：${experience.company} ${experience.role}`}
+                    aria-label={`${t.viewDetail}: ${experience.company} ${experience.role}`}
                   >
                     {t.viewDetail} <span aria-hidden="true">→</span>
                   </Link>

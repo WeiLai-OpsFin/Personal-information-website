@@ -23,6 +23,13 @@ const detailPaths = [
   "/experience/kpmg-audit",
 ];
 
+const scopedDetailPaths = new Set([
+  "/research/fake-review-booking",
+  "/research/hospital-appointment-matching",
+  "/projects/icm-2026-wnba",
+  "/projects/credit-risk-ridge-regression",
+]);
+
 let workerPromise;
 
 async function getWorker() {
@@ -72,6 +79,20 @@ function singleHeading(html, pathname) {
     .trim();
 }
 
+function assertRemovedPersonalDetailsAbsent(text, location) {
+  const prohibited = [
+    /2004\s*(?:年|[.\/-])\s*11\s*(?:月|[.\/-])\s*0?4/i,
+    /181\s*cm/i,
+    /60\s*kg/i,
+    /\binfj\b/i,
+    /天蝎座|\bscorpio\b/i,
+  ];
+
+  for (const pattern of prohibited) {
+    assert.doesNotMatch(text, pattern, `${location} must not expose removed personal details: ${pattern}`);
+  }
+}
+
 test("server-renders the Chinese home page, real detail links, and social metadata", async () => {
   const response = await render("/");
   assert.equal(response.status, 200);
@@ -103,9 +124,10 @@ test("server-renders the Chinese home page, real detail links, and social metada
 
   assert.doesNotMatch(html, /5\s*[×x]\s*President[’']s Honour Roll|President[’']s Honour Roll\s*5\s*[×x]/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
+  assertRemovedPersonalDetailsAbsent(html, "Chinese home page");
 });
 
-test("keeps original records private and publishes only the reviewed WebP derivatives", async () => {
+test("keeps raw records out of the public bundle and publishes only reviewed WebP derivatives", async () => {
   const [
     page,
     layout,
@@ -142,8 +164,8 @@ test("keeps original records private and publishes only the reviewed WebP deriva
   assert.match(page, /src="\/images\/lai-wei-portrait-square\.webp"/);
   assert.match(page, /href=\{`\$\{pathPrefix\}\/about`\}/);
   assert.match(page, /href=\{`\$\{pathPrefix\}\/academics`\}/);
-  assert.match(detailPage, /原始证明保留私有；只展示核验结果或脱敏副本。/);
-  assert.match(detailPage, /Original records remain private; only verified facts or redacted copies are shown\./);
+  assert.match(detailPage, /这里汇总与本页成果直接相关的证书、成绩或公开研究材料。/);
+  assert.match(detailPage, /Selected records and public project materials supporting the summary above\./);
   assert.match(layout, /p==="\/en"\|\|p\.startsWith\("\/en\/"\)/);
   assert.match(layout, /<HtmlLanguageSync\s*\/>/);
   assert.match(htmlLanguageSync, /usePathname\(\)/);
@@ -202,6 +224,56 @@ test("keeps original records private and publishes only the reviewed WebP deriva
   await assert.doesNotReject(access(projectRoot));
 });
 
+test("keeps public copy specific and removes defensive internal-audit language", async () => {
+  const [page, detailPage, portfolioContent, css] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/detail-page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/portfolio-content.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+  const publicCopy = `${page}\n${detailPage}\n${portfolioContent}`;
+  const forbidden = [
+    /隐私审查通过/,
+    /证据边界/,
+    /为什么强调/,
+    /并不自动等同/,
+    /公开重构与原始竞赛提交严格区分/,
+    /只展示核验事实/,
+    /本页严格使用/,
+    /不把[^。\n]*包装/,
+    /个人角色以自我陈述为准/,
+    /暂无实习证明/,
+    /账户所有权/,
+    /公开材料不足以支持/,
+    /Privacy reviewed/i,
+    /Evidence boundary/i,
+    /Why the page says/i,
+    /not automatically identical/i,
+    /explicitly separated/i,
+    /does not claim/i,
+    /individual role stated conservatively/i,
+    /no local internship certificate/i,
+    /Repository ownership is not enough/i,
+    /public materials do not support/i,
+    /original kept private/i,
+  ];
+
+  for (const pattern of forbidden) {
+    assert.doesNotMatch(publicCopy, pattern, `public copy must not expose internal audit language: ${pattern}`);
+  }
+
+  assert.match(page, /5,065/);
+  assert.match(page, /2,603/);
+  assert.match(page, /36,405/);
+  assert.match(page, /0\.166（p = \.0037）/);
+  assert.match(portfolioContent, /NO_MOVE：决策得分 10\.03，净利润 6\.04M/);
+  assert.match(portfolioContent, /β = 0\.081，p < \.001/);
+  assert.match(detailPage, /className="scope-note"/);
+  assert.match(css, /\.scope-note\s*\{/);
+  assert.doesNotMatch(css, /\.limitation-note\s*\{/);
+  assertRemovedPersonalDetailsAbsent(publicCopy, "public source copy");
+});
+
 test("ships responsive and accessible home-page interaction contracts", async () => {
   const [response, page, css] = await Promise.all([
     render("/"),
@@ -231,13 +303,7 @@ test("ships responsive and accessible home-page interaction contracts", async ()
   assert.match(page, /const pathPrefix = language === "en" \? "\/en" : ""/);
   assert.match(page, /tabIndex=\{-1\}/);
   assert.match(page, /\{ id: "contact", label: "Contact" \}/);
-  assert.match(page, /2004 年 11 月 4 日/);
-  assert.match(page, /4 November 2004/);
-  assert.match(page, /181 cm/);
-  assert.match(page, /60 kg/);
-  assert.match(page, /INFJ/);
-  assert.match(page, /天蝎座/);
-  assert.match(page, /Scorpio/);
+  assertRemovedPersonalDetailsAbsent(page, "home-page source");
   assert.match(page, /羽毛球、钢琴/);
   assert.match(page, /Badminton, piano/);
 
@@ -277,12 +343,30 @@ test("renders every known Chinese and English detail route with one h1, breadcru
 
     const html = await response.text();
     headings[language].push(singleHeading(html, pathname));
-    assert.match(html, /<nav class="breadcrumbs"[^>]+aria-label="(?:面包屑导航|Breadcrumb)"/);
+    assert.match(html, /<nav class="breadcrumbs"[^>]+aria-label="(?:面包屑导航|Breadcrumbs)"/);
     assert.match(html, /aria-current="page"/);
     assert.match(html, new RegExp(`href="${escapeRegExp(basePath)}"`));
     assert.match(html, new RegExp(`href="${escapeRegExp(`/en${basePath}`)}"`));
     assert.match(html, /class="language-switch"[^>]+role="group"/);
     assert.doesNotMatch(html, /href="[^"]+\.(?:pdf|docx?|txt)(?:[?#][^"]*)?"/i);
+    assert.doesNotMatch(html, /class="limitation-note"/);
+    assertRemovedPersonalDetailsAbsent(html, pathname);
+
+    const scopeCount = (html.match(/class="scope-note"/g) ?? []).length;
+    if (scopedDetailPaths.has(basePath)) {
+      assert.equal(scopeCount, 1, `${pathname} must render one scope note`);
+      assert.match(
+        html,
+        language === "zh" ? />范围与解读<\/h2>/ : />Scope &amp; interpretation<\/h2>/,
+      );
+      const scopeIndex = html.indexOf('class="scope-note"');
+      const linksIndex = html.indexOf('class="detail-links"');
+      if (linksIndex >= 0) {
+        assert.ok(scopeIndex < linksIndex, `${pathname} scope note must precede external links`);
+      }
+    } else {
+      assert.equal(scopeCount, 0, `${pathname} must not render an empty scope note`);
+    }
 
     const canonicalUrl = `${productionOrigin}${pathname}`;
     const chineseUrl = `${productionOrigin}${basePath}`;
@@ -319,8 +403,10 @@ test("renders every known Chinese and English detail route with one h1, breadcru
     render("/projects/icm-2026-wnba").then((response) => response.text()),
     render("/en/projects/icm-2026-wnba").then((response) => response.text()),
   ]);
-  assert.match(chineseEvidence, /原始证明保留私有；只展示核验结果或脱敏副本。/);
-  assert.match(englishEvidence, /Original records remain private; only verified facts or redacted copies are shown\./);
+  assert.match(chineseEvidence, /NO_MOVE：决策得分 10\.03/);
+  assert.match(chineseEvidence, /Finalist 对应 2026 年团队竞赛成绩；本页策略数值来自我完成的 Python 公开实现。/);
+  assert.match(englishEvidence, /NO_MOVE: decision score 10\.03/);
+  assert.match(englishEvidence, /The Finalist distinction belongs to the 2026 team entry; the strategy figures come from my public Python implementation\./);
 });
 
 test("serves /en as the canonical English home and rejects forwarded metadata injection", async () => {
@@ -335,6 +421,7 @@ test("serves /en as the canonical English home and rejects forwarded metadata in
 
   assert.equal(englishResponse.status, 200);
   const englishHtml = await englishResponse.text();
+  assertRemovedPersonalDetailsAbsent(englishHtml, "English home page");
   assert.match(englishHtml, /Turning data into evidence for policy, finance, and business decisions/);
   assert.match(englishHtml, /<title>Lai Wei \| Applied Economics, Research &amp; Finance<\/title>/i);
   assert.match(

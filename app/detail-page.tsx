@@ -18,12 +18,11 @@ const labels = {
     role: "角色",
     status: "状态",
     methods: "方法与工具",
-    evidence: "成果与证据",
-    privacy: "隐私审查通过",
-    limitation: "证据边界",
+    evidence: "成果与材料",
+    limitation: "范围与解读",
     links: "继续查看",
     newWindow: "新窗口打开",
-    footer: "以证据为起点，以清晰为标准。",
+    footer: "把复杂问题讲清楚，把分析落到行动。",
     top: "返回顶部",
   },
   en: {
@@ -34,12 +33,11 @@ const labels = {
     role: "Role",
     status: "Status",
     methods: "Methods & tools",
-    evidence: "Outputs & evidence",
-    privacy: "Privacy reviewed",
-    limitation: "Evidence boundary",
+    evidence: "Outputs & materials",
+    limitation: "Scope & interpretation",
     links: "Explore further",
     newWindow: "opens in a new window",
-    footer: "Evidence first. Clarity always.",
+    footer: "Clarify the problem. Turn analysis into action.",
     top: "Back to top",
   },
 } as const;
@@ -88,7 +86,7 @@ export default function DetailPage({
       </header>
 
       <main className="detail-main" id="detail-main" tabIndex={-1}>
-        <nav className="breadcrumbs" aria-label={language === "zh" ? "面包屑导航" : "Breadcrumb"}>
+        <nav className="breadcrumbs" aria-label={language === "zh" ? "面包屑导航" : "Breadcrumbs"}>
           <a href={homeHref}>{t.home}</a>
           <span aria-hidden="true">/</span>
           <a href={backHref}>{categoryLabel}</a>
@@ -175,12 +173,12 @@ export default function DetailPage({
             <section className="detail-band evidence-band" aria-labelledby="evidence-title">
               <div className="detail-band-heading">
                 <h2 id="evidence-title">{t.evidence}</h2>
-                <p>{language === "zh" ? "原始证明保留私有；只展示核验结果或脱敏副本。" : "Original records remain private; only verified facts or redacted copies are shown."}</p>
+                <p>{language === "zh" ? "这里汇总与本页成果直接相关的证书、成绩或公开研究材料。" : "Selected records and public project materials supporting the summary above."}</p>
               </div>
               <div className="evidence-grid">
                 {content.evidence.map((item) => (
                   <article className="evidence-card" key={item.title}>
-                    {item.image && item.imageAlt && (
+                    {item.image && item.imageAlt && item.privacyReviewed && (
                       <div className="evidence-image">
                         <Image
                           src={item.image}
@@ -194,9 +192,6 @@ export default function DetailPage({
                       </div>
                     )}
                     <div className="evidence-copy">
-                      <p className="privacy-badge">
-                        <span aria-hidden="true">✓</span> {t.privacy}
-                      </p>
                       <h3>{item.title}</h3>
                       <p>{item.description}</p>
                     </div>
@@ -207,8 +202,8 @@ export default function DetailPage({
           )}
 
           {content.limitation && (
-            <aside className="limitation-note" aria-labelledby="limitation-title">
-              <p className="mini-label" id="limitation-title">{t.limitation}</p>
+            <aside className="scope-note" aria-labelledby="limitation-title">
+              <h2 className="mini-label" id="limitation-title">{t.limitation}</h2>
               <p>{content.limitation}</p>
             </aside>
           )}
@@ -223,7 +218,7 @@ export default function DetailPage({
                     key={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    aria-label={`${link.label}（${t.newWindow}）`}
+                    aria-label={`${link.label} (${t.newWindow})`}
                   >
                     <span>
                       <strong>{link.label}</strong>
@@ -235,6 +230,7 @@ export default function DetailPage({
               </div>
             </section>
           )}
+
         </article>
       </main>
 

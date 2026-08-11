@@ -92,7 +92,7 @@ Original source records remain private and outside `public/` and Git. Original t
 
 The public site contains only verified factual summaries and the explicitly allowlisted, privacy-reviewed derivative images above. The original PDFs, DOC/DOCX files, text exports, scans, and credential files are not public assets. Acceptance evidence is described as acceptance; it is not upgraded into a claim of attendance, presentation, publication, or sole authorship unless a source independently supports that claim.
 
-The phone number and exact date of birth are public because the site owner explicitly requested them. They are excluded from descriptions and social metadata, but any information shown on a public page can still be indexed, copied, or collected by automated crawlers.
+The phone number remains public because the site owner explicitly requested it. Date of birth, height, weight, zodiac sign, and MBTI are not published. Contact information is excluded from descriptions and social metadata, but anything shown on a public page can still be indexed, copied, or collected by automated crawlers.
 
 ## Content maintenance
 
@@ -101,7 +101,6 @@ Re-check these items before each major résumé, application, or recruiting cycl
 - The end date and evidence status of the China Construction Bank internship, currently shown as “Present”.
 - Research acceptance, presentation, publication, and repository status.
 - GPA, honours, programme wording, internship dates, and award wording against authoritative records.
-- Personal details such as weight and MBTI if Lai Wei wants them kept current.
 - Public contact information and the privacy review of every asset under `public/`.
 
 ## Technology and hosting
